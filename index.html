@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description", content="">
+        <title>Мастер-классы по онлайн-шопингу</title>
+
+        <link rel="preload" href="fonts/mabry-pro.otf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-light.otf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-medium.otf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-bold.otf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-black.otf" as="font" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <link rel="icon" href="img/favicons/favicon.ico">
+        <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+        <link rel="manifest" href="img/favicons/site.webmanifest">
+        
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    </head>
+    <body>
+        <header class="page-header">
+            <section class="page-header__wrapper page-content">
+                <a class="page-header__logo">
+                    <svg width="55" height="55">
+                        <use xlink:href="img/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <!--
+                При инициализации header-nav.js
+                добавляется класс page-header__wrapper-nav--closed
+                при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
+                -->
+                <nav class="page-header__wrapper-nav">
+                    <button class="page-header__toggle" type="button">
+                        <span class="visually-hidden">Открыть меню.</span>
+                    </button>
+                    <div class="page-header__nav">
+                        <ul class="page-header__list">
+                            <li class="page-header__item">
+                                <a class="page-header__link page-header__link--active"  href="#about" aria-label="Перейти к разделу.">
+                                    О&nbsp;чем это
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#program" aria-label="Перейти к разделу.">
+                                    Программа
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#master-classes" aria-label="Перейти к разделу.">
+                                    Мастер-классы
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#gallery" aria-label="Перейти к разделу.">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#upcoming-event" aria-label="Перейти к разделу.">
+                                    Ближайший мастер-класс
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <a class="page-header__button button button-primary" href="#">
+                    Записаться
+                </a>
+            </section>
+        </header>
+        <main>
+            <section class="main container">
+                <div class="main__content">
+                    <h1>Мастер-классы по&nbsp;онлайн-шопингу</h1>
+                    <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
+                    <a class="main__button button button-secondary" href="#">
+                        Записаться
+                    </a>
+                </div>
+                <dl class="main__upcoming-event">
+                    <dt>Ближайший мастер-класс</dt>
+                    <dd>офлайн</dd>
+                    <dd>14 сентября</dd>
+                    <dd>11:00</dd>
+                </dl>
+            </section>
+            <section class="about container" id="about">
+                <h2>О чем это</h2>
+                <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по&nbsp;всей стране и&nbsp;обеспечивает ее&nbsp;всеми необходимыми правилами.</p>
+                <h3>Для кого</h3>
+                <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
+                <ul class="about__questions">
+                    <li class="about__question">
+                        Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты?
+                    </li>
+                    <li class="about__question">
+                        Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут?
+                    </li>
+                    <li class="about__question">
+                        Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут?
+                    </li>
+                    <li class="about__question">
+                        Далеко-далеко за&nbsp;словесными?
+                    </li>
+                </ul>
+                <p class="about__answer">Ответим на&nbsp;эти вопросы&nbsp;&mdash; и&nbsp;не&nbsp;только на&nbsp;них!</p>
+            </section>
+            <section class="master-classes container" id="master-classes">
+                <h2>Мастер-классы</h2>
+                <ul class="master-classes__list">
+                    <li class="master-classes__item">
+                        <h3>Экономия на онлайн-шопинге</h3>
+                        <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
+                        <a class="master-classes__button button button-primary" href="#">
+                            Записаться
+                        </a>
+                    </li>
+                    <li class="master-classes__item">
+                        <h3>Мастер-класс</h3>
+                        <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
+                        <a class="master-classes__button button button-primary" href="#">
+                            Записаться
+                        </a>
+                    </li>
+                    <li class="master-classes__item">
+                        <h3>Лучшие площадки</h3>
+                        <p>Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Эта парадигматическая страна, в&nbsp;которой жаренные члены предложения залетают прямо в&nbsp;рот.</p>
+                        <a class="master-classes__button button button-primary" href="#">
+                            Записаться
+                        </a>
+                    </li>
+                    <li class="master-classes__item">
+                        <h3>Мастер-класс</h3>
+                        <p>Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
+                        <a class="master-classes__button button button-primary" href="#">
+                            Записаться
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+            <section class="gallery container" id="gallery">
+                <h2>Галерея</h2>
+                <ul class="gallery__list">
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-1.webp, img/desktop/gallery/gallery-1@2x.webp 2x">
+                            <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-1.webp, img/mobile/gallery/gallery-mobile-1@2x.webp 2x">
+
+                            <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-1.jpg, img/desktop/gallery/gallery-1@2x.png 2x">
+                            <img src="img/mobile/gallery/gallery-mobile-1.jpg" srcset="img/mobile/gallery/gallery-mobile-1@2x.jpg" width="328" height="328" alt="Фламинго.">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-2.webp, img/desktop/gallery/gallery-2@2x.webp 2x">
+                            <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-2.webp, img/mobile/gallery/gallery-mobile-2@2x.webp 2x">
+                            
+                            <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-2.jpg, img/desktop/gallery/gallery-2@2x.png 2x">
+                            <img src="img/mobile/gallery/gallery-mobile-2.jpg" srcset="img/mobile/gallery/gallery-mobile-2@2x.jpg" width="491" height="328" alt="Писец на снегу.">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-3.webp, img/desktop/gallery/gallery-3@2x.webp 2x">
+                            <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-3.webp, img/mobile/gallery/gallery-mobile-3@2x.webp 2x">
+                            
+                            <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-3.jpg, img/desktop/gallery/gallery-3@2x.png 2x">
+                            <img src="img/mobile/gallery/gallery-mobile-3.jpg" srcset="img/mobile/gallery/gallery-mobile-3@2x.jpg" width="328" height="492" alt="Морда хаски.">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-4.webp, img/desktop/gallery/gallery-4@2x.webp 2x">
+                            <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-4.webp, img/mobile/gallery/gallery-mobile-4@2x.webp 2x">
+                            
+                            <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-4.jpg, img/desktop/gallery/gallery-4@2x.png 2x">
+                            <img src="img/mobile/gallery/gallery-mobile-4.jpg" srcset="img/mobile/gallery/gallery-mobile-4@2x.jpg" width="328" height="328" alt="Скульптура.">
+                        </picture>
+                    </li>
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-5.webp, img/desktop/gallery/gallery-5@2x.webp 2x">
+                            <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-5.webp, img/mobile/gallery/gallery-mobile-5@2x.webp 2x">
+                            
+                            <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-5.jpg, img/desktop/gallery/gallery-5@2x.png 2x">
+                            <img src="img/mobile/gallery/gallery-mobile-5.jpg" srcset="img/mobile/gallery/gallery-mobile-5@2x.jpg" width="328" height="492" alt="Рука в красно-синей подсветке.">
+                        </picture>
+                    </li>
+                </ul>
+            </section>
+            <section class="upcoming-event container">
+                <h2>Ближайший мастер-класс</h2>
+                <dl class="upcoming-event__date">
+                    <dt>Дата</dt>
+                    <dd>14 сентября</dd>
+                </dl>
+                <dl class="upcoming-event__time">
+                    <dt>Старт</dt>
+                    <dd>11:00</dd>
+                </dl>
+                <dl class="upcoming-event__place">
+                    <dt>Место</dt>
+                    <dd>Екатеринбург, ул.&nbsp;Карла Либкнехта, 22, БЦ&nbsp;Консул.&nbsp;Офис 315, пространство PXL PRO</dd>
+                </dl>
+                <dl class="upcoming-event__participation">
+                    <dt>Участие</dt>
+                    <dd>Бесплатно, по&nbsp;предварительной регистрации</dd>
+                    <dd>
+                        <em>Количество мест ограничено!</em>
+                    </dd>
+                </dl>
+                <p class="upcoming-event__information">С&nbsp;парковками, признаемся, у&nbsp;нас обычно сложно, поэтому лучше приехать заранее, чтобы найти парковочное место</p>
+            </section>
+        </main>
+    </body>
+</html>
