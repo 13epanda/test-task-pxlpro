@@ -1,0 +1,47 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-salmon:                      #FF7777;
+$color-maya-blue:                   #89B2FF;
+$color-heliotrope:                  #CC5EF2;
+$color-black-russian:               #0C0B31;
+$color-gun-powder:                  #3D3C5A;
+$color-sulu:                        #B3FF77;
+
+// Box-shadow
+
+$shadow-default-salmon:             0px 10px 30px rgba(255, 119, 119, 0.4);
+
+// Typography
+// ---------------------------------
+
+$ff-mabry-pro:                         "Mabry Pro", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-375:                            375px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1360:                           1360px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

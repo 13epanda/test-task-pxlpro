@@ -1,0 +1,56 @@
+@mixin hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+@mixin retina {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// Mobile first
+
+@mixin vp-375 {
+  @media (min-width: $vp-375) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
+
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
+@mixin vp-1360 {
+  @media (min-width: $vp-1360) {
+    @content;
+  }
+}
+
+@mixin vp-1920 {
+  @media (min-width: $vp-1920) {
+    @content;
+  }
+}
