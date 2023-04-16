@@ -1,0 +1,65 @@
+.master-classes {
+    padding-top: 66px;
+    padding-bottom: 71px;
+    overflow-x: revert;
+
+    h2 {
+        margin-bottom: 61px;
+    }
+}
+
+.master-classes__list {
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: stretch;
+    row-gap: 16px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: blur(64px);
+    }
+
+    &::before {
+        top: -104px;
+        right: -119px;
+        width: 260px;
+        height: 264px;
+        transform: rotate(-30deg);
+        background-image: url("../img/mobile/blur/blur-1.png");
+    }
+
+    &::after {
+        bottom: -36px;
+        right: -20px;
+        width: 229px;
+        height: 227px;
+        transform: rotate(-180deg);
+        background-image: url("../img/mobile/blur/blur-2.png");
+
+    }
+}
+
+.master-classes__item {
+    list-style: none;
+    width: 100%;
+    padding: 33px 23px 24px 24px;
+    border-radius: 16px;
+    background-color: $color-gun-powder;
+    z-index: 1;
+
+    h3 {
+        margin-bottom: 22px;
+    }
+}
+
+.master-classes__button {
+    margin-top: 43px;
+}

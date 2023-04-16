@@ -1,0 +1,51 @@
+.button {
+    display: block;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.button-primary {
+    max-width: 208px;
+    padding: 15px 20px;
+    font-family: $ff-mabry-pro-medium;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: $color-salmon;
+    border: 1px solid $color-salmon;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus {
+        color: $color-tomato;
+        border-color: $color-tomato;
+    }
+}
+
+.button-secondary {
+    max-width: 200px;
+    padding: 15px 20px;
+    font-family: $ff-mabry-pro-medium;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: $color-default-white;
+    background-color: $color-salmon;
+    border: none;
+    border-radius: 8px;
+    box-shadow: $shadow-default-salmon;
+
+    &:hover,
+    &:focus {
+        background-color: $color-tomato;
+    }
+
+    &:disabled {
+        background-color: $color-default-white;
+        color: $color-gun-powder;
+        opacity: 0.3;
+    }
+}

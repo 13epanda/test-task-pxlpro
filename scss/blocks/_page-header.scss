@@ -1,0 +1,72 @@
+.page-header {
+    background-color: $color-black-russian;
+
+    &__toggle {
+        display: none;
+        margin-top: 13px;
+        margin-bottom: 22px;
+        width: 28px;
+        height: 28px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../img/icons/close.svg");
+        border: none;
+        cursor: pointer;
+    }
+    
+    &__list {
+        width: 100%;
+        margin: 0;
+        padding-right: 16px;
+        padding-left: 16px;
+        font-family: $ff-mabry-pro;
+        font-size: 18px;
+        list-style: none;
+    }
+    
+    &__item {
+        margin-top: 63px;
+    }
+    
+    &__link {
+        width: 100%;
+    }
+
+    &__button {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+    }
+}
+
+.page-header__wrapper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .page-header__nav {
+        margin-top: 73px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 5px;
+        border-top: 1px solid rgba($color-default-white, 0.2);
+    }
+
+    &--closed {
+        display: none;
+    }
+
+    &--opened {
+        .page-header__toggle {
+            background-image: url("../img/icons/burger.svg");
+        }
+    }
+}
+
+.page-header__logo {
+    display: none;
+}

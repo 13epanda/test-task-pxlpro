@@ -1,0 +1,70 @@
+.gallery {
+    position: relative;
+    overflow-x: revert;
+    padding-top: 66px;
+    padding-bottom: 71px;
+
+    h2 {
+        margin-bottom: 61px;
+    }
+
+    &__list {
+        position: relative;
+        overflow-x: auto;
+        display: flex;
+        width: 100%;
+        height: 238px;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    &__item {
+        list-style: none;
+        width: 238px;
+        flex-shrink: 0;
+        height: 100%;
+        margin-left: 16px;
+        border-radius: 16px;
+        overflow: hidden;
+        z-index: 1;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: blur(64px);
+        }
+
+        &::before {
+            top: -20px;
+            left: -403px;
+            width: 403px;
+            height: 409px;
+            transform: rotate(-150deg);
+            background-image: url("../img/mobile/blur/blur-1.png");
+        }
+
+        &::after {
+            bottom: -35px;
+            right: -145px;
+            width: 270px;
+            height: 268px;
+            transform: rotate(-165deg);
+            background-image: url("../img/mobile/blur/blur-2.png");
+
+        }
+}

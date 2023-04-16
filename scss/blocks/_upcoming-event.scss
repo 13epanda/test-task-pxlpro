@@ -1,0 +1,128 @@
+.upcoming-event {
+    position: relative;
+    padding-top: 71px;
+    padding-bottom: 56px;
+    overflow: hidden;
+
+    h2 {
+        margin-bottom: 57px;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 45px;
+        z-index: 1;
+    }
+
+    &__date,
+    &__time {
+        margin: 0;
+
+        dt {
+            margin-bottom: 24px;
+        }
+
+        dd {
+            margin-left: 0;
+            font-family: $ff-mabry-pro-light;
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        span {
+            font-family: $ff-mabry-pro-light;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__place,
+    &__participation {
+        grid-column: 1/-1;
+
+        dt {
+            margin-bottom: 19px;
+        }
+
+        dd {
+            margin-left: 0;
+            font-family: $ff-mabry-pro-light;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        em {
+            display: block;
+            margin-top: 8px;
+            color: $color-salmon;
+        }
+    }
+
+    &__information {
+        position: relative;
+        grid-column: 1/-1;
+        background-color: rgba($color-default-white, 0.2);
+        border-radius: 8px;
+        margin-top: 5px;
+        margin-bottom: 11px;
+        padding: 15px 23px;
+        overflow: hidden;
+
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 96px;
+            height: 96px;
+            transform: translate(32px, 32px);
+            background-image: url("../img/icons/attention.svg");
+        }
+    }
+
+    &__map {
+        grid-column: 1/-1;
+        height: calc(100vw - 30px);
+        max-height: 344px;
+        border-radius: 16px;
+        background-color: $color-maya-blue;
+        background-image: url("../img/mobile/map.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include retina {
+            background-image: url("../img/mobile/map@2x.jpg");
+        }
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: blur(64px);
+    }
+
+    &::before {
+        bottom: 176px;
+        right: -384px;
+        width: 403px;
+        height: 408px;
+        transform: rotate(-15deg);
+        background-image: url("../img/mobile/blur/blur-1.png");
+    }
+
+    &::after {
+        bottom: -5px;
+        left: -138px;
+        width: 270px;
+        height: 268px;
+        transform: rotate(-165deg);
+        background-image: url("../img/mobile/blur/blur-2.png");
+
+    }
+}
