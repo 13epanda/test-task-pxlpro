@@ -1,16 +1,13 @@
 .about {
-    margin-top: 132px;
-    margin-bottom: 132px;
+    padding-top: 66px;
+    padding-bottom: 66px;
 
     h2 {
-        margin-bottom: 51px;
+        margin-bottom: 52px;
     }
 
-    p {
+    &__text {
         margin-bottom: 34px;
-        font-family: $ff-mabry-pro-light;
-        font-size: 16px;
-        line-height: 24px;
     }
 
     h3 {
@@ -21,5 +18,40 @@
         margin-top: 40px;
         margin-bottom: 0;
         padding-left: 19px;
+    }
+
+    li {
+        list-style-type: none;
+        position: relative;
+        margin-bottom: 16px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 10px;
+            left: -19px;
+            width: 3px;
+            height: 3px;
+            background-color: $color-default-white;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__answer {
+        max-width: 200px;
+        margin-left: 19px;
+        margin-bottom: 0;
+        color: $color-salmon;
+    }
+
+    @include vp-768 {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 48px;
+        }
     }
 }

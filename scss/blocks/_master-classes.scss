@@ -1,65 +1,97 @@
 .master-classes {
-    padding-top: 66px;
-    padding-bottom: 71px;
-    overflow-x: clip;
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 69px;
 
     h2 {
-        margin-bottom: 61px;
+        margin-bottom: 62px;
     }
-}
 
-.master-classes__list {
-    position: relative;
-    margin: 0;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    justify-items: stretch;
-    row-gap: 16px;
-
-    &::before,
     &::after {
         position: absolute;
         content: "";
         background-size: contain;
         background-repeat: no-repeat;
         filter: blur(64px);
-    }
-
-    &::before {
-        top: -104px;
-        right: -119px;
-        width: 260px;
-        height: 264px;
-        transform: rotate(-30deg);
-        background-image: url("../img/mobile/blur/blur-1.png");
-    }
-
-    &::after {
-        bottom: -36px;
+        bottom: 36px;
         right: -20px;
         width: 229px;
         height: 227px;
         transform: rotate(-180deg);
         background-image: url("../img/mobile/blur/blur-2.png");
+    }
 
+    &__list {
+        position: relative;
+        margin: 0;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 16px;
+    
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: blur(64px);
+        }
+    
+        &::before {
+            top: -104px;
+            right: -119px;
+            width: 260px;
+            height: 264px;
+            background-image: url("../img/mobile/blur/blur-1.png");
+        }
+    
+        &::after {
+            width: 315px;
+            height: 313px;
+            top: 50%;
+            left: -51px;
+            transform: translateY(-50%);
+            background-image: url("../img/mobile/blur/blur-2.png");
+    
+        }
+    }
+    
+    &__item {
+        list-style: none;
+        width: 100%;
+        padding: 33px 23px 24px 24px;
+        border-radius: 16px;
+        background-color: $color-gun-powder;
+        z-index: 1;
+    
+        h3 {
+            margin-bottom: 22px;
+        }
+    }
+    
+    &__button {
+        margin-top: 43px;
+    }
+    
+    @include vp-768 {
+        &__list {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 48px;            
+            row-gap: 48px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &__button {
+            margin-top: auto;
+        }
     }
 }
 
-.master-classes__item {
-    list-style: none;
-    width: 100%;
-    padding: 33px 23px 24px 24px;
-    border-radius: 16px;
-    background-color: $color-gun-powder;
-    z-index: 1;
-
-    h3 {
-        margin-bottom: 22px;
-    }
-}
-
-.master-classes__button {
-    margin-top: 43px;
-}

@@ -23,7 +23,7 @@
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/main.js" type="module"></script>
     </head>
-    <body>
+    <body class="wrapper">
         <!--
             При инициализации header-nav.js
             добавляется класс page-header--closed
@@ -86,11 +86,11 @@
                 <div class="main__content">
                     <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
                     <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                    <button class="main__button button button-secondary" href="#">
-                        Записаться
+                    <button class="main__button button button-secondary">
+                        <span>Записаться</span>
                     </button>
                 </div>
-                <dl class="main__upcoming-event">
+                <dl class="text-normal main__upcoming-event">
                     <dt>Ближайший мастер-класс</dt>
                     <dd>офлайн</dd>
                     <dd>14 сентября</dd>
@@ -99,60 +99,66 @@
             </section>
             <section class="about container" id="about">
                 <h2 class="title-h2">О&nbsp;чем это</h2>
-                <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по&nbsp;всей стране и&nbsp;обеспечивает ее&nbsp;всеми необходимыми правилами.</p>
-                <h3 class="title-h3">Для кого</h3>
-                <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                <ul class="about__questions">
-                    <li class="about__question">
-                        Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты?
-                    </li>
-                    <li class="about__question">
-                        Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут?
-                    </li>
-                    <li class="about__question">
-                        Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут?
-                    </li>
-                    <li class="about__question">
-                        Далеко-далеко за&nbsp;словесными?
-                    </li>
-                </ul>
-                <p class="about__answer">Ответим на&nbsp;эти вопросы&nbsp;&mdash; и&nbsp;не&nbsp;только на&nbsp;них!</p>
+                <div class="about__wrapper">
+                    <div class="about__wrapper-left">
+                        <p class="text-normal about__text">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по&nbsp;всей стране и&nbsp;обеспечивает ее&nbsp;всеми необходимыми правилами.</p>
+                        <h3 class="title-h3">Для кого</h3>
+                        <p class="text-normal about__text">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
+                    </div>
+                    <div class="about__wrapper-right">
+                        <ul class="about__questions">
+                            <li class="about__question">
+                                Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты?
+                            </li>
+                            <li class="about__question">
+                                Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут?
+                            </li>
+                            <li class="about__question">
+                                Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут?
+                            </li>
+                            <li class="about__question">
+                                Далеко-далеко за&nbsp;словесными?
+                            </li>
+                        </ul>
+                        <p class="about__answer">Ответим на&nbsp;эти вопросы&nbsp;&mdash; и&nbsp;не&nbsp;только на&nbsp;них!</p>
+                    </div>
+                </div>
             </section>
             <section class="master-classes container" id="master-classes">
                 <h2 class="title-h2">Мастер-классы</h2>
                 <ul class="master-classes__list">
                     <li class="master-classes__item">
-                        <h3 class="title-h3">Экономия на онлайн-шопинге</h3>
+                        <h3 class="title-h3">Экономия на&nbsp;онлайн&#8209;шопинге</h3>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <button class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary">
                             Записаться
                         </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Мастер-класс</h3>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                        <button class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary">
                             Записаться
                         </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Лучшие площадки</h3>
                         <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Эта парадигматическая страна, в&nbsp;которой жаренные члены предложения залетают прямо в&nbsp;рот.</p>
-                        <button class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary">
                             Записаться
                         </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Мастер-класс</h3>
                         <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <button class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary">
                             Записаться
                         </button>
                     </li>
                 </ul>
             </section>
-            <section class="gallery container" id="gallery">
-                <h2 class="title-h2">Галерея</h2>
+            <section class="gallery" id="gallery">
+                <h2 class="title-h2 container">Галерея</h2>
                     <ul class="gallery__list">
                         <li class="gallery__item">
                             <picture>
@@ -204,7 +210,7 @@
         </main>
         <footer>
             <section class="upcoming-event page-content">
-                <h2>Ближайший мастер-класс</h2>
+                <h2 class="title-h2">Ближайший мастер&#8209;класс</h2>
                 <div class="upcoming-event__wrapper">
                     <dl class="upcoming-event__date">
                         <dt class="text-small">Дата</dt>
@@ -212,7 +218,7 @@
                     </dl>
                     <dl class="upcoming-event__time">
                         <dt class="text-small">Старт</dt>
-                        <dd>11:00</dd>
+                        <dd>11<span>:</span>00</dd>
                     </dl>
                     <dl class="upcoming-event__place">
                         <dt class="text-small">Место</dt>
