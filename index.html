@@ -11,7 +11,7 @@
         <link rel="preload" href="fonts/mabry-pro-medium.otf" as="font" crossorigin="anonymous">
         <link rel="preload" href="fonts/mabry-pro-bold.otf" as="font" crossorigin="anonymous">
         <link rel="preload" href="fonts/mabry-pro-black.otf" as="font" crossorigin="anonymous">
-        
+
         <link rel="stylesheet" href="css/style.min.css" type="text/css">
 
         <link rel="icon" href="img/favicons/favicon.ico">
@@ -19,9 +19,9 @@
         <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
         <link rel="manifest" href="img/favicons/site.webmanifest">
-        
+
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/main.js" type="module"></script>
-        <!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
     </head>
     <body>
         <!--
@@ -158,7 +158,7 @@
                             <picture>
                                 <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-1.webp, img/desktop/gallery/gallery-1@2x.webp 2x">
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-1.webp, img/mobile/gallery/gallery-mobile-1@2x.webp 2x">
-    
+
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-1.jpg, img/desktop/gallery/gallery-1@2x.png 2x">
                                 <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-1.jpg" srcset="img/mobile/gallery/gallery-mobile-1@2x.jpg" width="328" height="328" alt="Фламинго.">
                             </picture>
@@ -167,7 +167,7 @@
                             <picture>
                                 <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-2.webp, img/desktop/gallery/gallery-2@2x.webp 2x">
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-2.webp, img/mobile/gallery/gallery-mobile-2@2x.webp 2x">
-                                
+
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-2.jpg, img/desktop/gallery/gallery-2@2x.png 2x">
                                 <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-2.jpg" srcset="img/mobile/gallery/gallery-mobile-2@2x.jpg" width="491" height="328" alt="Писец на снегу.">
                             </picture>
@@ -176,7 +176,7 @@
                             <picture>
                                 <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-3.webp, img/desktop/gallery/gallery-3@2x.webp 2x">
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-3.webp, img/mobile/gallery/gallery-mobile-3@2x.webp 2x">
-                                
+
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-3.jpg, img/desktop/gallery/gallery-3@2x.png 2x">
                                 <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-3.jpg" srcset="img/mobile/gallery/gallery-mobile-3@2x.jpg" width="328" height="492" alt="Морда хаски.">
                             </picture>
@@ -185,7 +185,7 @@
                             <picture>
                                 <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-4.webp, img/desktop/gallery/gallery-4@2x.webp 2x">
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-4.webp, img/mobile/gallery/gallery-mobile-4@2x.webp 2x">
-                                
+
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-4.jpg, img/desktop/gallery/gallery-4@2x.png 2x">
                                 <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-4.jpg" srcset="img/mobile/gallery/gallery-mobile-4@2x.jpg" width="328" height="328" alt="Скульптура.">
                             </picture>
@@ -194,7 +194,7 @@
                             <picture>
                                 <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-5.webp, img/desktop/gallery/gallery-5@2x.webp 2x">
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-5.webp, img/mobile/gallery/gallery-mobile-5@2x.webp 2x">
-                                
+
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-5.jpg, img/desktop/gallery/gallery-5@2x.png 2x">
                                 <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-5.jpg" srcset="img/mobile/gallery/gallery-mobile-5@2x.jpg" width="328" height="492" alt="Рука в красно-синей подсветке.">
                             </picture>
@@ -230,7 +230,7 @@
                             С&nbsp;парковками, признаемся, у&nbsp;нас обычно сложно, поэтому лучше приехать заранее, чтобы найти парковочное место
                         </p>
                     </div>
-                    <div class="upcoming-event__map" id="map"></div>   
+                    <div class="upcoming-event__map" id="map"></div>
                 </div>
             </section>
         </footer>
