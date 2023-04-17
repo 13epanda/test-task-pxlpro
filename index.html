@@ -20,9 +20,15 @@
         <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
         <link rel="manifest" href="img/favicons/site.webmanifest">
         
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script src="js/main.js" type="module"></script>
+        <!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
     </head>
     <body>
+        <!--
+            При инициализации header-nav.js
+            добавляется класс page-header--closed
+            при клике на кнопку page-header__toggle класс меняется на page-header--opened
+            -->
         <header class="page-header">
             <section class="page-header__wrapper">
                 <a class="page-header__logo">
@@ -30,15 +36,7 @@
                         <use xlink:href="img/sprite.svg#logo"></use>
                     </svg>
                 </a>
-                <!--
-                При инициализации header-nav.js
-                добавляется класс page-header__wrapper-nav--closed
-                при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
-                -->
                 <nav class="page-header__wrapper-nav">
-                    <button class="page-header__toggle" type="button">
-                        <span class="visually-hidden">Открыть меню.</span>
-                    </button>
                     <div class="page-header__nav">
                         <ul class="page-header__list">
                             <li class="page-header__item">
@@ -69,9 +67,12 @@
                         </ul>
                     </div>
                 </nav>
-                <a class="page-header__button button button-primary" href="#">
+                <button class="page-header__toggle" type="button">
+                    <span></span>
+                </button>
+                <button class="page-header__button button button-primary" href="#">
                     Записаться
-                </a>
+                </button>
             </section>
         </header>
         <main>
@@ -85,9 +86,9 @@
                 <div class="main__content">
                     <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
                     <p>Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                    <a class="main__button button button-secondary" href="#">
+                    <button class="main__button button button-secondary" href="#">
                         Записаться
-                    </a>
+                    </button>
                 </div>
                 <dl class="main__upcoming-event">
                     <dt>Ближайший мастер-класс</dt>
@@ -123,30 +124,30 @@
                     <li class="master-classes__item">
                         <h3 class="title-h3">Экономия на онлайн-шопинге</h3>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <a class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary" href="#">
                             Записаться
-                        </a>
+                        </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Мастер-класс</h3>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                        <a class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary" href="#">
                             Записаться
-                        </a>
+                        </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Лучшие площадки</h3>
                         <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Эта парадигматическая страна, в&nbsp;которой жаренные члены предложения залетают прямо в&nbsp;рот.</p>
-                        <a class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary" href="#">
                             Записаться
-                        </a>
+                        </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Мастер-класс</h3>
                         <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <a class="master-classes__button button button-primary" href="#">
+                        <button class="master-classes__button button button-primary" href="#">
                             Записаться
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </section>

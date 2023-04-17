@@ -1,6 +1,6 @@
 .gallery {
     position: relative;
-    overflow-x: revert;
+    overflow-x: clip;
     padding-top: 66px;
     padding-bottom: 71px;
 
@@ -25,6 +25,7 @@
         height: 100%;
         margin-left: 16px;
         border-radius: 16px;
+        background-color: $color-spun-pearl;
         overflow: hidden;
         z-index: 1;
 

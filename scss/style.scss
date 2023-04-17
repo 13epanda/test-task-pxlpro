@@ -6,11 +6,14 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "global/_title";
+@import "global/title";
+
+// Components
+@import "components/buttons";
 
 // Blocks
 //---------------------------------
-@import "blocks/buttons";
+
 @import "blocks/page-header";
 @import "blocks/main";
 @import "blocks/about";
