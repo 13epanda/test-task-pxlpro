@@ -2,8 +2,7 @@
     position: relative;
     padding-top: 65px;
     padding-bottom: 56px;
-    overflow-y: hidden;
-    overflow-x: clip;
+    overflow-y: clip;
 
     h2 {
         margin-bottom: 60px;
@@ -34,7 +33,7 @@
         }
     }
 
-    &__date {  
+    &__date {
         span {
             font-family: $ff-mabry-pro-light;
             font-size: 16px;
@@ -206,7 +205,7 @@
             dt {
                 margin-bottom: 12px;
             }
-            
+
             dd {
                 font-size: 64px;
                 line-height: 64px;
