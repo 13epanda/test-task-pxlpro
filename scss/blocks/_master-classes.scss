@@ -19,6 +19,10 @@
         height: 227px;
         transform: rotate(-180deg);
         background-image: url("../img/mobile/blur/blur-2.png");
+
+        @include retina {
+            background-image: url("../img/mobile/blur/blur-2@2x.png");
+        }
     }
 
     &__list {
@@ -45,6 +49,10 @@
             width: 260px;
             height: 264px;
             background-image: url("../img/mobile/blur/blur-1.png");
+
+            @include retina {
+            background-image: url("../img/mobile/blur/blur-1@2x.png");
+        }
         }
     
         &::after {
@@ -54,7 +62,10 @@
             left: -51px;
             transform: translateY(-50%);
             background-image: url("../img/mobile/blur/blur-2.png");
-    
+            
+            @include retina {
+                background-image: url("../img/mobile/blur/blur-2@2x.png");
+            }
         }
     }
     

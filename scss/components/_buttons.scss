@@ -17,11 +17,16 @@
     color: $color-salmon;
     border: 1px solid $color-salmon;
     border-radius: 8px;
+    
+    
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
 
-    &:hover,
-    &:focus {
-        color: $color-tomato;
-        border-color: $color-tomato;
+        &:focus,
+        &:hover {
+            color: $color-tomato;
+            border-color: $color-tomato;
+        }
     }
 
     @include vp-1024 {
@@ -48,9 +53,13 @@
         position: relative;
     }
 
-    &:hover,
-    &:focus {
-        background-color: $color-tomato;
+    @media (hover: hover),
+    screen and (min-width: 0\0) {
+
+        &:focus,
+        &:hover {
+            background-color: $color-tomato;
+        }
     }
 
     &:disabled {

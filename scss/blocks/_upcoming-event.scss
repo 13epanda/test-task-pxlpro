@@ -134,6 +134,10 @@
         height: 408px;
         transform: rotate(-15deg);
         background-image: url("../img/mobile/blur/blur-1.png");
+
+        @include retina {
+            background-image: url("../img/mobile/blur/blur-1@2x.png");
+        }
     }
 
     &::after {
@@ -143,6 +147,10 @@
         height: 268px;
         transform: rotate(-165deg);
         background-image: url("../img/mobile/blur/blur-2.png");
+
+        @include retina {
+            background-image: url("../img/mobile/blur/blur-2@2x.png");
+        }
     }
 
     @include vp-768 {
@@ -192,7 +200,7 @@
         padding-bottom: 138px;
 
         h2 {
-            margin-bottom: 85px;
+            margin-bottom: 90px;
         }
 
         &__wrapper {

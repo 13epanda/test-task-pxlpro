@@ -4,10 +4,11 @@
 
     &__image {
         position: absolute;
-        top: -39px;
+        top: -130px;
         right: 0;
-        transform: translateY(-50%);
-        width: 100%;
+        transform: translate(50%, -50%);
+        width: 240%;
+        max-width: 1300px;
     }
 
     &__content {
@@ -84,11 +85,19 @@
         height: calc(var(--vh, 1vh) * 100);
         display: flex;
         align-items: center;
-        padding-bottom: 138px;
+        padding-bottom: 175px;
+        margin-bottom: 66px;
+
+        &__image {
+            width: 175%;
+            max-width: none;
+            top: 120px;
+            transform: translate(57%, 0);
+        }
 
         &__content {
             max-width: 723px;
-            margin-top: 75px;
+            margin-top: 0;
 
             p {
                 margin-bottom: 76px;
@@ -103,6 +112,12 @@
             position: absolute;
             bottom: 70px;
             column-gap: 71px;
+        }
+    }
+
+    @include vp-1360 {
+        &__image {
+            top: -80px;
         }
     }
     
