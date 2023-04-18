@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
     smoothScroll();
     headerNav();
 
+    
+
     window.addEventListener('load', () => {
       ymaps.ready(initMap);
     });
