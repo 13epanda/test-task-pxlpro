@@ -1,9 +1,9 @@
 .gallery {
     position: relative;
-    padding-top: 66px;
-    padding-bottom: 71px;
+    padding: 66px 0 71px;
 
     h2 {
+        margin-left: 16px;
         margin-bottom: 63px;
     }
 
@@ -13,7 +13,7 @@
         display: flex;
         width: auto;
         height: 328px;
-        margin: 0 0 0 16px;
+        margin: 0;
         padding-left: 0;
     }
 
@@ -29,7 +29,11 @@
         z-index: 1;
 
         &:first-child {
-            margin-left: 0;
+            margin-left: 16px;
+        }
+
+        &:last-child {
+            margin-right: 16px;
         }
     }
 
@@ -54,7 +58,7 @@
         left: -403px;
         width: 403px;
         height: 409px;
-        transform: rotate(-150deg);
+        transform: scale(1, -1) rotate(-135deg);
         background-image: url("../img/mobile/blur/blur-1.png");
     }
 
@@ -68,6 +72,12 @@
     }
 
     @include vp-768 {
+        padding: 0 64px;
+
+        h2 {
+            margin-left: 0;
+        }
+
         &__list {
             overflow: hidden;
             display: grid;
@@ -80,7 +90,12 @@
 
         &__item {
             width: 100%;
-            margin-left: 0;
+            margin: 0;
+
+            &:first-child,
+            &:last-child {
+                margin: 0;
+            }
         }
     }
 
@@ -92,6 +107,32 @@
         &__item:nth-child(7n+1) {
             grid-column: span 2;
             grid-row: span 2;
+        }
+    }
+
+    @include vp-1024 {
+        padding-top: 135px;
+        padding-bottom: 138px;
+
+        h2 {
+            margin-bottom: 85px;
+        }
+
+        
+        &::before {
+            width: 448px;
+            height: 445px;
+            filter: blur(125px);
+            top: 168px;
+            right: -70px;
+        }
+
+        &::after {
+            width: 511px;
+            height: 518px;
+            filter: blur(125px);
+            top: 264px;
+            right: -84px;
         }
     }
 }

@@ -6,11 +6,8 @@
         margin-bottom: 52px;
     }
 
-    &__text {
-        margin-bottom: 34px;
-    }
-
     h3 {
+        margin-top: 34px;
         margin-bottom: 22px;
     }
 
@@ -41,7 +38,7 @@
     }
 
     &__answer {
-        max-width: 200px;
+        max-width: 60%;
         margin-left: 19px;
         margin-bottom: 0;
         color: $color-salmon;
@@ -53,5 +50,42 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 48px;
         }
+
+        &__answer {
+            max-width: 410px;
+        }
     }
+
+    @include vp-1024 {
+        padding-top: 138px;
+        padding-bottom: 138px;
+
+        h2 {
+            margin-bottom: 66px;
+        }
+
+        h3 {
+            margin-top: 90px;
+        }
+
+        &__wrapper-right {
+            padding-left: 107px;
+
+            ul {
+                margin-top: 25px;
+                margin-bottom: 55px;
+            }
+
+            li {
+                margin-bottom: 40px;
+
+                &::before {
+                    width: 5px;
+                    height: 5px;
+                    top: 15px;
+                }
+            }
+        }
+    }
+
 }
