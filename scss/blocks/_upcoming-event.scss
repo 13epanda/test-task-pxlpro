@@ -269,4 +269,19 @@
             left: 0;
         }
     }
+
+    @include vp-1920 {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr 248px 427px;
+        }
+
+        &__information {
+            margin-top: 75px;
+            padding: 19px 24px 21px;
+        }
+
+        &__map {
+            margin-right: 125px;
+        }
+    }
 }

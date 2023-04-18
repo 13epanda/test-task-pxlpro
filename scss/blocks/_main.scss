@@ -84,9 +84,10 @@
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
         display: flex;
-        align-items: center;
-        padding-bottom: 175px;
-        margin-bottom: 66px;
+        align-items: flex-start;
+        padding-top: 221px;
+        padding-bottom: 120px;
+        margin-bottom: 70px;
 
         &__image {
             width: 175%;
@@ -98,6 +99,7 @@
         &__content {
             max-width: 723px;
             margin-top: 0;
+            margin-bottom: 55px;
 
             p {
                 margin-bottom: 76px;
@@ -117,7 +119,9 @@
 
     @include vp-1360 {
         &__image {
-            top: -80px;
+            top: -89px;
+            width: 170%;
+            right: 17px;
         }
     }
     
