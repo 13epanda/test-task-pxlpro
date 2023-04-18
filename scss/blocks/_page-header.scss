@@ -70,18 +70,18 @@
         }
 
     }
-    
+
     &__list {
         width: 100%;
         margin: 0;
         padding: 30px 16px 0;
         list-style: none;
     }
-    
+
     &__item {
         margin-top: 3px;
     }
-    
+
     &__link {
         display: block;
         width: 100%;
@@ -184,6 +184,11 @@
             padding-bottom: 0;
         }
 
+        &__nav {
+            border-top: none;
+            margin-top: 0;
+        }
+
         &__logo {
             display: block;
             width: 55px;
@@ -212,15 +217,15 @@
             .page-header__toggle {
                 display: none;
             }
-    
+
             .page-header__nav {
                 display: block;
                 margin-top: 0;
                 border-top: none;
                 margin-right: 15px;
             }
-        } 
-        
+        }
+
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -252,7 +257,7 @@
                     height: 1px;
                     background-color: $color-salmon;
                 }
-            
+
             }
         }
     }
