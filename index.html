@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description", content="">
+        <meta name="description" content="Тестовое задание выполненное Титовец В.О.">
         <title>Мастер-классы по онлайн-шопингу</title>
 
         <link rel="preload" href="fonts/mabry-pro.otf" as="font" crossorigin="anonymous">
@@ -20,7 +20,7 @@
         <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
         <link rel="manifest" href="img/favicons/site.webmanifest">
 
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
         <script src="js/main.js" type="module"></script>
     </head>
     <body class="wrapper">
@@ -31,15 +31,14 @@
             -->
         <header class="page-header">
             <section class="page-header__wrapper page-content">
+                <h2 class="visually-hidden">Меню навигации по сайту.</h2>
                 <a class="page-header__logo">
-                    <svg width="55" height="55">
-                        <use xlink:href="img/sprite.svg#logo"></use>
-                    </svg>
+                    <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.658 38V17.07h-8.67l-4.485 17.522-4.485-17.521h-8.67V38h4.783V19.582L23.915 38h7.176l4.783-18.418V38h4.784Z" fill="#89B2FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 50C39.926 50 50 39.926 50 27.5S39.926 5 27.5 5 5 15.074 5 27.5 15.074 50 27.5 50Zm0 5C42.688 55 55 42.688 55 27.5S42.688 0 27.5 0 0 12.312 0 27.5 12.312 55 27.5 55Z" fill="#89B2FF"/></svg>
                 </a>
                 <nav class="page-header__nav">
                     <ul class="page-header__list">
                         <li class="page-header__item">
-                            <a class="page-header__link page-header__link--active"  href="#about" aria-label="Перейти к разделу.">
+                            <a class="page-header__link"  href="#about" aria-label="Перейти к разделу.">
                                 О&nbsp;чем это
                             </a>
                         </li>
@@ -65,10 +64,10 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="page-header__toggle" type="button">
+                <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
                     <span></span>
                 </button>
-                <button class="page-header__button button button-primary" href="#">
+                <button class="page-header__button button button-primary" aria-label="Открыть форму для регистрации.">
                     Записаться
                 </button>
             </section>
@@ -76,15 +75,15 @@
         <main>
             <section class="main container">
                 <picture>
-                    <source type="image/webp" media="(min-width: 1360px)" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
                     <source type="image/webp"  srcset="img/mobile/main-mobile.webp, img/mobile/main-mobile@2x.webp 2x">
-                    <source media="(min-width: 1360px)" srcset="img/desktop/main.png, img/desktop/main@2x.png 2x">
+                    <source media="(min-width: 1024px)" srcset="img/desktop/main.png, img/desktop/main@2x.png 2x">
                     <img  class="main__image" src="img/mobile/main-mobile.png" srcset="img/mobile/main-mobile@2x.png" width="1100" height="684" alt="Страница сайта с каталогом брендовой одежды.">
                 </picture>
                 <div class="main__content">
                     <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
                     <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                    <button class="main__button button button-secondary">
+                    <button class="main__button button button-secondary" aria-label="Открыть форму для регистрации.">
                         <span>Записаться</span>
                     </button>
                 </div>
@@ -95,7 +94,7 @@
                     <dd>11:00</dd>
                 </dl>
             </section>
-            <section class="about container" id="about">
+            <section class="about container" id="about" data-nav="0">
                 <h2 class="title-h2">О&nbsp;чем это</h2>
                 <div class="about__wrapper">
                     <div class="about__wrapper-left">
@@ -122,40 +121,40 @@
                     </div>
                 </div>
             </section>
-            <section class="master-classes container" id="master-classes">
+            <section class="master-classes container" id="master-classes" data-nav="2">
                 <h2 class="title-h2">Мастер-классы</h2>
                 <ul class="master-classes__list">
                     <li class="master-classes__item">
                         <h3 class="title-h3">Экономия на&nbsp;онлайн&#8209;шопинге</h3>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <button class="master-classes__button button button-primary">
+                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
                             Записаться
                         </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Мастер-класс</h3>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                        <button class="master-classes__button button button-primary">
+                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
                             Записаться
                         </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Лучшие площадки</h3>
                         <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Эта парадигматическая страна, в&nbsp;которой жаренные члены предложения залетают прямо в&nbsp;рот.</p>
-                        <button class="master-classes__button button button-primary">
+                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
                             Записаться
                         </button>
                     </li>
                     <li class="master-classes__item">
                         <h3 class="title-h3">Мастер-класс</h3>
                         <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <button class="master-classes__button button button-primary">
+                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
                             Записаться
                         </button>
                     </li>
                 </ul>
             </section>
-            <section class="gallery container" id="gallery">
+            <section class="gallery container" id="gallery" data-nav="3">
                 <h2 class="title-h2">Галерея</h2>
                     <ul class="gallery__list">
                         <li class="gallery__item">
@@ -207,7 +206,7 @@
             </section>
         </main>
         <footer>
-            <section class="upcoming-event page-content" id="upcoming-event">
+            <section class="upcoming-event page-content" id="upcoming-event" data-nav="4">
                 <h2 class="title-h2">Ближайший мастер&#8209;класс</h2>
                 <div class="upcoming-event__wrapper">
                     <dl class="upcoming-event__date">
@@ -220,7 +219,7 @@
                     </dl>
                     <dl class="upcoming-event__place">
                         <dt class="text-small">Место</dt>
-                        <dd>Екатеринбург, ул.&nbsp;Карла Либкнехта, 22, БЦ&nbsp;Консул.&nbsp;Офис 315, пространство PXL PRO</dd>
+                        <dd>Екатеринбург, ул.&nbsp;Карла&nbsp;Либкнехта, 22, БЦ&nbsp;Консул.&nbsp;Офис 315, пространство PXL&nbsp;PRO</dd>
                     </dl>
                     <dl class="upcoming-event__participation">
                         <dt class="text-small">Участие</dt>
