@@ -255,4 +255,18 @@
             margin-right: 71px;
         }
     }
+
+    @include vp-1920 {
+        &__item {
+            margin-right: 67px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__image {
+            top: -104px;
+        }
+    }
 }
