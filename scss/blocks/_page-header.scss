@@ -163,18 +163,33 @@
                 transform: rotate(-45deg);
             }
         }
+
+        .page-header__nav {
+            height: calc(100vh - 65px);
+            height: calc(var(--vh, 1vh) * 100 - 65px);
+            overflow: auto;
+        }
     }
 
     @include vp-768 {
         &--opened {
+            min-height: auto;
+
             .page-header__toggle {
                 left: 64px;
+            }
+
+            .page-header__nav {
+                height: auto;
+                overflow: hidden;
             }
         }
 
         &__nav {
             margin-left: -64px;
             margin-right: -64px;
+            height: auto;
+            overflow: hidden;
         }
     }
 
