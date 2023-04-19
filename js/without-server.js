@@ -2,6 +2,29 @@ let navMain = document.querySelector('.page-header');
 let navToggle = document.querySelector('.page-header__toggle');
 let navItems =  document.querySelectorAll('.page-header__item');
 let navLinks = document.querySelectorAll('.page-header__link');
+    
+const initVh = () => {
+    let vh = window.innerHeight / 100;
+
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
+const smoothScroll = () => {
+    const anchors = document.querySelectorAll('a[href*="#"]');
+
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute('href').substr(1);
+
+            document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            });
+        });
+    }
+};
 
 const closeMenu = () => {
     navMain.classList.add('page-header--closed');
@@ -33,8 +56,6 @@ const initHeaderNav = () => {
         }
     });
 }
-
-//Изменение активного состояния элемента меню при скроле до раздела
 
 const scrollNav = () => {
     if (window.innerWidth > 768) {
@@ -75,4 +96,34 @@ const scrollNav = () => {
     }
 };
 
-module.export (initHeaderNav,scrollNav);
+window.addEventListener('DOMContentLoaded', () => {
+    initVh();
+    smoothScroll();
+    initHeaderNav();
+    scrollNav();
+
+    window.addEventListener('load', () => { 
+        ymaps.ready(function() {
+            var myMap = new ymaps.Map('map', {
+                center: [56.840646, 60.612180],
+                zoom: 15,
+                controls: [
+                    'zoomControl',
+                ]
+            });
+
+            var myPlacemark = new ymaps.Placemark([56.840646, 60.612180], {
+            hintContent: 'Офис 315, PXL PRO'
+            },{
+            iconLayout: 'default#image',
+
+            iconImageHref: 'img/mobile/map-pin.png',
+            iconImageSize: [133, 87],
+            iconImageOffset: [-66, -87],
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        });
+    });
+});
+        
