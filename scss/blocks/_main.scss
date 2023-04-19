@@ -4,11 +4,11 @@
 
     &__image {
         position: absolute;
-        top: -130px;
+        top: -117px;
         right: 0;
-        transform: translate(50%, -50%);
-        width: 240%;
-        max-width: 1300px;
+        transform: translate(0, -50%);
+        width: 137%;
+        max-width: 1060px;
     }
 
     &__content {
@@ -90,10 +90,10 @@
         margin-bottom: 70px;
 
         &__image {
-            width: 175%;
+            top: 150px;
+            width: 75%;
             max-width: none;
-            top: 120px;
-            transform: translate(57%, 0);
+            transform: translate(18%, 0);
         }
 
         &__content {
@@ -119,10 +119,18 @@
 
     @include vp-1360 {
         &__image {
-            top: -89px;
-            width: 170%;
-            right: 17px;
+            top: 2px;
+            width: 92%;
+            transform: translate(18%, 0);
+            right: calc(-100vw + 1360px);
         }
     }
-    
+
+    @include vp-1920 {
+        &__image {
+            width: 89%;
+            transform: translate(0, 0);
+            right: calc((-100vw + 1480px) / 2);
+        }     
+    }  
 }
