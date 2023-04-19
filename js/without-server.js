@@ -29,15 +29,19 @@ const smoothScroll = () => {
 const closeMenu = () => {
     navMain.classList.add('page-header--closed');
     navMain.classList.remove('page-header--opened');
+    document.body.classList.remove('lock');
 
     navLinks.forEach((el) => {
-        el.removeEventListener('click', closeMenu);
+        if (el.href !== '') {
+            el.removeEventListener('click', closeMenu);
+        }
     })
 }
 
 const openMenu = () => {
     navMain.classList.remove('page-header--closed');
     navMain.classList.add('page-header--opened');
+    document.body.classList.add('lock');
 }
 
 const initHeaderNav = () => {
@@ -48,7 +52,9 @@ const initHeaderNav = () => {
             openMenu();
 
             navLinks.forEach((el) => {
-                el.addEventListener('click', closeMenu);
+                if (el.href !== '') {
+                    el.addEventListener('click', closeMenu);
+                }
             })
 
         } else {
