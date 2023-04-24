@@ -105,7 +105,10 @@
         height: calc(100vw - 30px);
         min-height: 344px;
         max-height: 560px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
         border-radius: 16px;
+        -khtml-border-radius: 16px;
         -webkit-backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         overflow: hidden;
@@ -285,7 +288,7 @@
             margin-top: 15px;
             height: calc(100% - 15px);
             background-image: url("../img/desktop/map.jpg");
-    
+
             @include retina {
                 background-image: url("../img/desktop/map@2x.jpg");
             }
