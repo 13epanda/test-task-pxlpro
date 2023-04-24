@@ -7,14 +7,14 @@ const initMap = () => {
         ]
     });
 
-    var myPlacemark = new ymaps.Placemark([56.840646, 60.612180], {
-    hintContent: 'Офис 315, PXL PRO'
+    var myPlacemark = new ymaps.Placemark([56.840646, 60.612180], {                
+        hintContent: 'Офис 315, PXL PRO'
     },{
-    iconLayout: 'default#image',
+        iconLayout: 'default#image',
 
-    iconImageHref: '../img/mobile/map-pin.png',
-    iconImageSize: [133, 87],
-    iconImageOffset: [-66, -87],
+        iconImageHref: '../img/mobile/map-pin.png',
+        iconImageSize: [172, 87],
+        iconImageOffset: [-86, -87],
     });
 
     myMap.geoObjects.add(myPlacemark);

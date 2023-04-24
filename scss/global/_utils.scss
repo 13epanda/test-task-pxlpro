@@ -2,7 +2,15 @@
   position: relative;
 
   display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
   flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
@@ -38,10 +46,15 @@
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
+  overflow-x: clip;
 
   @include vp-768{
     padding-right: 64px;
     padding-left: 64px;
+  }
+
+  @media screen and (min-width: $vp-1024) {
+    overflow-x: initial;
   }
 
   @include vp-1360 {
@@ -60,11 +73,16 @@
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
+  overflow-x: clip;
 
   @include vp-768{
     padding-right: 64px;
     padding-left: 64px;
   }
+
+  @media screen and (min-width: $vp-1024) {
+    overflow-x: initial;
+    overflow-y: clip;  }
 
   @include vp-1360 {
     max-width: 1360px;

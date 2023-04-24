@@ -2,8 +2,11 @@
     position: relative;
     padding-top: 66px;
     padding-bottom: 71px;
+    padding-left: 0;
+    padding-right: 0;
 
     h2 {
+        padding-left: 16px;
         margin-bottom: 63px;
     }
 
@@ -11,17 +14,26 @@
         position: relative;
         overflow-x: auto;
         display: flex;
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
         width: auto;
-        height: 328px;
-        margin: 0 0 0 -16px;
+        margin: 0;
         padding-left: 0;
+        -ms-overflow-style: none;  /* IE и Edge */
+        scrollbar-width: none;  /* Firefox */
+
+        &::-webkit-scrollbar { /* Chrome, Safari и Opera */
+            display: none;
+        }
     }
 
     &__item {
         list-style: none;
         width: 328px;
         flex-shrink: 0;
-        height: 100%;
+        height: 328px;
         margin-left: 16px;
         border-radius: 16px;
         background-color: $color-gun-powder;
@@ -30,6 +42,10 @@
 
         &:first-child {
             margin-left: 16px;
+        }
+
+        &:last-child {
+            margin-right: 16px;
         }
     }
 
@@ -47,6 +63,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         filter: blur(64px);
+        -webkit-filter: blur(64px);
+        -moz-filter: blur(64px);
+        -ms-filter: blur(64px);
     }
 
     &::before {
@@ -76,12 +95,18 @@
     }
 
     @include vp-768 {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        h2 {
+            padding-left: 0;
+        }
 
         &__list {
             overflow: hidden;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-auto-rows: 272px;
+            grid-auto-rows: calc(50vw - 80px);
             row-gap: 48px;
             column-gap: 48px;
             height: auto;
@@ -89,6 +114,7 @@
 
         &__item {
             width: 100%;
+            height: auto;
             margin: 0;
 
             &:first-child,
@@ -101,6 +127,7 @@
     @include vp-1024 {
         &__list {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-auto-rows: calc(25vw - 68px);
             margin-left: 0;
         }
 
@@ -120,6 +147,9 @@
             width: 448px;
             height: 445px;
             filter: blur(125px);
+            -webkit-filter: blur(125px);
+            -moz-filter: blur(125px);
+            -ms-filter: blur(125px);
             top: 168px;
             right: -70px;
         }
@@ -128,8 +158,22 @@
             width: 511px;
             height: 518px;
             filter: blur(125px);
+            -webkit-filter: blur(125px);
+            -moz-filter: blur(125px);
+            -ms-filter: blur(125px);
             top: 264px;
             right: -84px;
         }
+    }
+
+    @include vp-1360 {
+        &__list {
+            grid-auto-rows: 272px;
+        }
+    }
+
+    @include vp-1920 {
+        padding-left: 128px;
+        padding-right: 128px;
     }
 }

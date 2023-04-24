@@ -1,7 +1,7 @@
-let navMain = document.querySelector('.page-header');
-let navToggle = document.querySelector('.page-header__toggle');
-let navItems =  document.querySelectorAll('.page-header__item');
-let navLinks = document.querySelectorAll('.page-header__link');
+const navMain = document.querySelector('.page-header');
+const navToggle = document.querySelector('.page-header__toggle');
+const navItems =  document.querySelectorAll('.page-header__item');
+const navLinks = document.querySelectorAll('.page-header__link');
 
 const closeMenu = () => {
     navMain.classList.add('page-header--closed');
@@ -40,28 +40,30 @@ const initHeaderNav = () => {
     });
 }
 
-//Изменение активного состояния элемента меню при скроле до раздела
-
 const scrollNav = () => {
     if (window.innerWidth > 768) {
-        let heightMenu = document.querySelector('.page-header__nav').clientHeight;
+        const heightMenu = document.querySelector('.page-header__nav').clientHeight;
+        const screenHeight = document.documentElement.clientHeight;
+        const bodyHeight = document.body.clientHeight;
+        
         let positionSelects = [];
         let currentActive = null;
 
         document.querySelectorAll('[data-nav]').forEach((el) => {
             positionSelects.push({
                 pos: el.offsetTop,
-                id: el.getAttribute('data-nav')
+                id: el.getAttribute('data-nav'),
+                height: el.clientHeight
             })
         });
 
         positionSelects=positionSelects.reverse();
 
         window.addEventListener('scroll', () => {
-            let scrollDistance = window.scrollY;
+            const scrollDistance = window.scrollY;
 
             for(var i = 0 ; i < positionSelects.length; i++) {
-                if(positionSelects[i].pos - heightMenu <= scrollDistance) {
+                if((bodyHeight - scrollDistance - heightMenu <= screenHeight) || (positionSelects[i].pos - heightMenu <= scrollDistance) ){
                     if(currentActive !==i) {
                         currentActive = i;
                         navLinks.forEach((el) => {
@@ -81,4 +83,4 @@ const scrollNav = () => {
     }
 };
 
-module.export (initHeaderNav,scrollNav);
+export {initHeaderNav,scrollNav};

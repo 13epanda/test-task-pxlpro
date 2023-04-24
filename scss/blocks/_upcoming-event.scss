@@ -2,7 +2,6 @@
     position: relative;
     padding-top: 65px;
     padding-bottom: 56px;
-    overflow-y: clip;
 
     h2 {
         margin-bottom: 60px;
@@ -81,7 +80,7 @@
         border-radius: 8px;
         margin-top: 7px;
         margin-bottom: 11px;
-        padding: 0 23px;
+        padding: 15px 23px 17px 24px;
         overflow: hidden;
 
 
@@ -125,6 +124,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         filter: blur(64px);
+        -webkit-filter: blur(64px);
+        -moz-filter: blur(64px);
+        -ms-filter: blur(64px);
     }
 
     &::before {
@@ -183,7 +185,6 @@
         &__information {
             grid-row: 3;
             grid-column: 3/5;
-            padding-top: 24px;
             margin-bottom: 0;
         }
 
@@ -249,12 +250,20 @@
         &__map {
             margin-top: 15px;
             height: calc(100% - 15px);
+            background-image: url("../img/desktop/map.jpg");
+    
+            @include retina {
+                background-image: url("../img/desktop/map@2x.jpg");
+            }
         }
 
         &::before {
             width: 682px;
             height: 691px;
             filter: blur(125px);
+            -webkit-filter: blur(125px);
+            -moz-filter: blur(125px);
+            -ms-filter: blur(125px);
             bottom: -288px;
             right: -600px;
             transform: rotate(10deg);
@@ -264,6 +273,9 @@
             width: 396px;
             height: 394px;
             filter: blur(125px);
+            -webkit-filter: blur(125px);
+            -moz-filter: blur(125px);
+            -ms-filter: blur(125px);
             transform: rotate(352deg);
             bottom: 100px;
             left: 0;

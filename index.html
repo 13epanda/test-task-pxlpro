@@ -22,10 +22,7 @@
         <link rel="manifest" href="img/favicons/site.webmanifest">
 
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-        <!--При работе с сервером-->
-        <!--
-            <script src="js/main.js" type="module"></script>
-        -->
+        <script src="js/main.js" type="module"></script>
     </head>
     <body class="wrapper">
         <!--
@@ -79,10 +76,8 @@
         <main>
             <section class="main container">
                 <picture>
-                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
-                    <source type="image/webp"  srcset="img/mobile/main-mobile.webp, img/mobile/main-mobile@2x.webp 2x">
-                    <source media="(min-width: 1024px)" srcset="img/desktop/main.png, img/desktop/main@2x.png 2x">
-                    <img  class="main__image" src="img/mobile/main-mobile.png" srcset="img/mobile/main-mobile@2x.png" width="887" height="549" alt="Страница сайта с каталогом брендовой одежды.">
+                    <source type="image/webp" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
+                    <img  class="main__image" src="img/desktop/main.png" srcset="img/desktop/main@2x.png 2x" width="887" height="549" alt="Страница сайта с каталогом брендовой одежды.">
                 </picture>
                 <div class="main__content">
                     <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
@@ -241,7 +236,5 @@
                 </div>
             </section>
         </footer>
-
-        <script src="js/without-server.js"></script>
     </body>
 </html>
