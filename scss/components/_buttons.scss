@@ -9,6 +9,7 @@
 
 .button-primary {
     max-width: 208px;
+    height: fit-content;
     padding: 13px 40px 17px;
     font-family: $ff-mabry-pro-medium;
     font-size: 16px;
@@ -37,6 +38,7 @@
 .button-secondary {
     position: relative;
     max-width: 208px;
+    height: fit-content;
     padding: 15px 40px;
     font-family: $ff-mabry-pro-medium;
     font-weight: 400;

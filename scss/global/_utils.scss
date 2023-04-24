@@ -54,13 +54,13 @@
     padding-left: 64px;
   }
 
-  @media screen and (min-width: $vp-1024) {
-    overflow-x: initial;
-  }
-
   @include vp-1360 {
     max-width: 1360px;
     margin: 0 auto;
+
+    @media screen {
+      overflow-x: initial;
+    }
   }
 
   @include vp-1920 {
@@ -76,20 +76,20 @@
   padding-left: 16px;
   overflow-x: hidden;
   overflow-x: clip;
+  overflow-y: clip;
 
   @include vp-768{
     padding-right: 64px;
     padding-left: 64px;
   }
 
-  @media screen and (min-width: $vp-1024) {
-    overflow-x: initial;
-    overflow-y: clip;  
-  }
-
   @include vp-1360 {
     max-width: 1360px;
     margin: 0 auto;
+
+    @media screen {
+      overflow-x: initial;
+    }
   }
 
   @include vp-1920 {
