@@ -161,7 +161,6 @@
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh) * 100);
         border-bottom: none;
-        transition: all $trans-default;
 
         .page-header__toggle {
             display: block;
@@ -255,7 +254,7 @@
             &:focus {
                 border-radius: 50%;
                 box-shadow: $shadow-default-salmon;
-                translate: shadow $tf-default;
+                transition: shadow $tf-default;
             }
         }
 

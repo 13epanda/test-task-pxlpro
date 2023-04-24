@@ -42,7 +42,7 @@ const initHeaderNav = () => {
 
 const scrollNav = () => {
     if (window.innerWidth > 768) {
-        const heightMenu = document.querySelector('.page-header__nav').clientHeight;
+        const heightMenu = document.querySelector('.page-header__nav').clientHeight + 10;
         const screenHeight = document.documentElement.clientHeight;
         const bodyHeight = document.body.clientHeight;
         

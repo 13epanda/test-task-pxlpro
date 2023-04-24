@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    padding-bottom: 66px;
+    padding-bottom: 56px;
 
     &__image {
         position: absolute;
@@ -29,6 +29,7 @@
     }
 
     &__upcoming-event {
+        display: -webkit-inline-box;
         display: grid;
         grid-template-columns: auto auto auto;
         column-gap: 49px;
@@ -141,9 +142,9 @@
         &__image {
             top: 2px;
             width: 92%;
-            right: calc(-100vw + 1360px);
-            right: -webkit-calc(-100vw + 1360px);
-            right: -moz-calc(-100vw + 1360px);
+            right: calc((-100vw + 1360px) / 2);
+            right: -webkit-calc(-(-100vw + 1360px) / 2);
+            right: -moz-calc((-100vw + 1360px) / 2);
         }
     }
 

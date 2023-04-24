@@ -46,6 +46,7 @@
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
+  overflow-x: hidden;
   overflow-x: clip;
 
   @include vp-768{
@@ -73,6 +74,7 @@
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
+  overflow-x: hidden;
   overflow-x: clip;
 
   @include vp-768{
@@ -82,7 +84,8 @@
 
   @media screen and (min-width: $vp-1024) {
     overflow-x: initial;
-    overflow-y: clip;  }
+    overflow-y: clip;  
+  }
 
   @include vp-1360 {
     max-width: 1360px;
