@@ -103,7 +103,8 @@
     &__map {
         grid-column: 1/-1;
         height: calc(100vw - 30px);
-        max-height: 344px;
+        min-height: 344px;
+        max-height: 560px;
         border-radius: 16px;
         -webkit-backface-visibility: hidden;
         -moz-backface-visibility: hidden;
@@ -194,7 +195,6 @@
             grid-row: 4;
             grid-column: 1/-1;
             height: 100%;
-            max-height: none;
         }
     }
 

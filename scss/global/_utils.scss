@@ -57,6 +57,7 @@
   @include vp-1360 {
     max-width: 1360px;
     margin: 0 auto;
+    overflow-x: hidden;
 
     @media screen {
       overflow-x: initial;
@@ -86,6 +87,7 @@
   @include vp-1360 {
     max-width: 1360px;
     margin: 0 auto;
+    overflow-x: hidden;
 
     @media screen {
       overflow-x: initial;
