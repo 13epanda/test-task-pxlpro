@@ -33,33 +33,35 @@
         <header class="page-header">
             <section class="page-header__wrapper page-content">
                 <h2 class="visually-hidden">Меню навигации по сайту.</h2>
-                <a class="page-header__logo" href="">
-                    <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.658 38V17.07h-8.67l-4.485 17.522-4.485-17.521h-8.67V38h4.783V19.582L23.915 38h7.176l4.783-18.418V38h4.784Z" fill="#89B2FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 50C39.926 50 50 39.926 50 27.5S39.926 5 27.5 5 5 15.074 5 27.5 15.074 50 27.5 50Zm0 5C42.688 55 55 42.688 55 27.5S42.688 0 27.5 0 0 12.312 0 27.5 12.312 55 27.5 55Z" fill="#89B2FF"/></svg>
-                </a>
-                <nav class="page-header__nav">
-                    <ul class="page-header__list">
-                        <li class="page-header__item">
-                            <a class="page-header__link"  href="#about" aria-label="Перейти к разделу.">
-                                О&nbsp;чем это
-                            </a>
-                        </li>
-                        <li class="page-header__item">
-                            <a class="page-header__link" href="#master-classes" aria-label="Перейти к разделу.">
-                                Мастер-классы
-                            </a>
-                        </li>
-                        <li class="page-header__item">
-                            <a class="page-header__link" href="#gallery" aria-label="Перейти к разделу.">
-                                Галерея
-                            </a>
-                        </li>
-                        <li class="page-header__item">
-                            <a class="page-header__link" href="#upcoming-event" aria-label="Перейти к разделу.">
-                                Ближайший мастер-класс
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="page-header__wrapper-nav">
+                   <a class="page-header__logo" href="">
+                        <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.658 38V17.07h-8.67l-4.485 17.522-4.485-17.521h-8.67V38h4.783V19.582L23.915 38h7.176l4.783-18.418V38h4.784Z" fill="#89B2FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 50C39.926 50 50 39.926 50 27.5S39.926 5 27.5 5 5 15.074 5 27.5 15.074 50 27.5 50Zm0 5C42.688 55 55 42.688 55 27.5S42.688 0 27.5 0 0 12.312 0 27.5 12.312 55 27.5 55Z" fill="#89B2FF"/></svg>
+                    </a>
+                    <nav class="page-header__nav">
+                        <ul class="page-header__list">
+                            <li class="page-header__item">
+                                <a class="page-header__link"  href="#about" aria-label="Перейти к разделу." >
+                                    О&nbsp;чем это
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#master-classes" aria-label="Перейти к разделу.">
+                                    Мастер-классы
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#gallery" aria-label="Перейти к разделу.">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="page-header__item">
+                                <a class="page-header__link" href="#upcoming-event" aria-label="Перейти к разделу.">
+                                    Ближайший мастер-класс
+                                </a>
+                            </li>
+                        </ul>
+                    </nav> 
+                </div>
                 <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
                     <span></span>
                 </button>
@@ -71,8 +73,13 @@
         <main>
             <section class="main container">
                 <picture>
-                    <source type="image/webp" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
-                    <img  class="main__image" src="img/desktop/main.png" srcset="img/desktop/main@2x.png 2x" width="887" height="549" alt="Страница сайта с каталогом брендовой одежды.">
+                    <source type="image/webp" media="(min-width: 1920px)" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1360px)" srcset="img/tablet/main-tablet.webp, img/tablet/main-tablet@2x.webp 2x">
+                    <source type="image/webp"  srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
+
+                    <source media="(min-width: 1920px)" srcset="img/desktop/main.png, img/desktop/main@2x.png 2x">
+                    <source media="(min-width: 1360px)" srcset="img/tablet/main-tablet.png, img/tablet/main-tablet@2x.png 2x">
+                    <img  class="main__image" src="img/desktop/main.png" srcset="img/desktop/main@2x.png 2x" width="887" height="549" loading="lazy" alt="Страница сайта с каталогом брендовой одежды.">
                 </picture>
                 <div class="main__content">
                     <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
@@ -115,7 +122,7 @@
                     </div>
                 </div>
             </section>
-            <section class="master-classes container" id="master-classes" data-nav="2">
+            <section class="master-classes container" id="master-classes" data-nav="1">
                 <h2 class="title-h2">Мастер-классы</h2>
                 <ul class="master-classes__list">
                     <li class="master-classes__item">
@@ -148,7 +155,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="gallery container" id="gallery" data-nav="3">
+            <section class="gallery container" id="gallery" data-nav="2">
                 <h2 class="title-h2">Галерея</h2>
                     <ul class="gallery__list">
                         <li class="gallery__item">
@@ -157,7 +164,7 @@
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-1.webp, img/mobile/gallery/gallery-mobile-1@2x.webp 2x">
 
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-1.jpg, img/desktop/gallery/gallery-1@2x.jpg 2x">
-                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-1.jpg" srcset="img/mobile/gallery/gallery-mobile-1@2x.jpg" width="328" height="329" alt="Фламинго.">
+                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-1.jpg" srcset="img/mobile/gallery/gallery-mobile-1@2x.jpg" width="328" height="329" loading="lazy" alt="Фламинго.">
                             </picture>
                         </li>
                         <li class="gallery__item">
@@ -166,7 +173,7 @@
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-2.webp, img/mobile/gallery/gallery-mobile-2@2x.webp 2x">
 
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-2.jpg, img/desktop/gallery/gallery-2@2x.jpg 2x">
-                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-2.jpg" srcset="img/mobile/gallery/gallery-mobile-2@2x.jpg" width="492" height="329" alt="Писец на снегу.">
+                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-2.jpg" srcset="img/mobile/gallery/gallery-mobile-2@2x.jpg" width="492" height="329" loading="lazy" alt="Писец на снегу.">
                             </picture>
                         </li>
                         <li class="gallery__item">
@@ -175,7 +182,7 @@
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-3.webp, img/mobile/gallery/gallery-mobile-3@2x.webp 2x">
 
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-3.jpg, img/desktop/gallery/gallery-3@2x.jpg 2x">
-                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-3.jpg" srcset="img/mobile/gallery/gallery-mobile-3@2x.jpg" width="329" height="492" alt="Морда хаски.">
+                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-3.jpg" srcset="img/mobile/gallery/gallery-mobile-3@2x.jpg" width="329" height="492" loading="lazy" alt="Морда хаски.">
                             </picture>
                         </li>
                         <li class="gallery__item">
@@ -184,7 +191,7 @@
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-4.webp, img/mobile/gallery/gallery-mobile-4@2x.webp 2x">
 
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-4.jpg, img/desktop/gallery/gallery-4@2x.jpg 2x">
-                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-4.jpg" srcset="img/mobile/gallery/gallery-mobile-4@2x.jpg" width="329" height="329" alt="Скульптура.">
+                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-4.jpg" srcset="img/mobile/gallery/gallery-mobile-4@2x.jpg" width="329" height="329" loading="lazy" alt="Скульптура.">
                             </picture>
                         </li>
                         <li class="gallery__item">
@@ -193,14 +200,14 @@
                                 <source type="image/webp"  srcset="img/mobile/gallery/gallery-mobile-5.webp, img/mobile/gallery/gallery-mobile-5@2x.webp 2x">
 
                                 <source media="(min-width: 1360px)" srcset="img/desktop/gallery/gallery-5.jpg, img/desktop/gallery/gallery-5@2x.jpg 2x">
-                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-5.jpg" srcset="img/mobile/gallery/gallery-mobile-5@2x.jpg" width="329" height="492" alt="Рука в красно-синей подсветке.">
+                                <img class="gallery__image" src="img/mobile/gallery/gallery-mobile-5.jpg" srcset="img/mobile/gallery/gallery-mobile-5@2x.jpg" width="329" height="492" loading="lazy" alt="Рука в красно-синей подсветке.">
                             </picture>
                         </li>
                     </ul>
             </section>
         </main>
         <footer>
-            <section class="upcoming-event page-content" id="upcoming-event" data-nav="4">
+            <section class="upcoming-event page-content" id="upcoming-event" data-nav="3">
                 <h2 class="title-h2">Ближайший мастер&#8209;класс</h2>
                 <div class="upcoming-event__wrapper">
                     <dl class="upcoming-event__date">
