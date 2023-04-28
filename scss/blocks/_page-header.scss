@@ -73,7 +73,7 @@
         }
 
         span {
-            top: 10px;
+            top: 11px;
         }
 
         &::after {
@@ -222,16 +222,16 @@
         width: 100%;
 
         &__wrapper {
-            display: flex;
             display: -webkit-flex; 
             display: -moz-box;    
             display: -ms-flexbox;
             display: -webkit-box;
-            justify-content: flex-start;
+            display: flex;
             -webkit-box-pack: start;
             -webkit-justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: flex-start;
             -webkit-align-items: flex-start;
+            align-items: flex-start;
             margin: 0 auto;
             padding-top: 25px;
             padding-bottom: 0;
@@ -260,8 +260,8 @@
 
         &__button {
             position: relative;
-            top: 0;
-            right: 0;
+            top: initial;
+            right: initial;
             margin-left: auto;
         }
 
