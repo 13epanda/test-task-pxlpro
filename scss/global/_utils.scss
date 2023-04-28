@@ -46,8 +46,6 @@
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
-  overflow-x: hidden;
-  overflow-x: clip;
 
   @include vp-768{
     padding-right: 64px;
@@ -57,11 +55,6 @@
   @include vp-1360 {
     max-width: 1360px;
     margin: 0 auto;
-    overflow-x: hidden;
-
-    @media screen {
-      overflow-x: initial;
-    }
   }
 
   @include vp-1920 {
@@ -75,9 +68,6 @@
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
-  overflow-x: hidden;
-  overflow-x: clip;
-  overflow-y: clip;
 
   @include vp-768{
     padding-right: 64px;
@@ -87,11 +77,6 @@
   @include vp-1360 {
     max-width: 1360px;
     margin: 0 auto;
-    overflow-x: hidden;
-
-    @media screen {
-      overflow-x: initial;
-    }
   }
 
   @include vp-1920 {

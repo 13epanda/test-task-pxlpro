@@ -82,6 +82,7 @@
         margin-bottom: 11px;
         padding: 15px 23px 17px 24px;
         overflow: hidden;
+        z-index: 1;
 
 
         &::after {
@@ -131,35 +132,48 @@
         content: "";
         background-size: contain;
         background-repeat: no-repeat;
-        -webkit-filter: blur(64px);
-        -moz-filter: blur(64px);
-        -ms-filter: blur(64px);
-        filter: blur(64px);
     }
 
     &::before {
         bottom: 176px;
-        right: -384px;
-        width: 403px;
-        height: 408px;
-        transform: rotate(-15deg);
-        background-image: url("../img/mobile/blur/blur-1.png");
+        right: 0;
+        width: 178px;
+        height: 736px;
+        background-image: url("../img/mobile/blur/blur-6.png");
+        background-position: right bottom;
 
-        @include retina {
-            background-image: url("../img/mobile/blur/blur-1@2x.png");
+        @include vp-1360 {
+            width: 314px;
+            height: 686px;
+            bottom: 0;
+            right: calc((-100vw + 1360px)/2);
+            background-image: url("../img/tablet/blur/blur-tablet-6.png");
+        }
+
+        @include vp-1920 {
+            right: calc((-100vw + 1920px)/2);
+            background-image: url("../img/desktop/blur/blur-6.png");
         }
     }
 
     &::after {
-        bottom: -5px;
-        left: -138px;
-        width: 270px;
-        height: 268px;
-        transform: rotate(-165deg);
-        background-image: url("../img/mobile/blur/blur-2.png");
+        bottom: 0;
+        left: 0;
+        width: 337px;
+        height: 418px;
+        background-image: url("../img/mobile/blur/blur-7.png");
+        background-position: left bottom;
 
-        @include retina {
-            background-image: url("../img/mobile/blur/blur-2@2x.png");
+        @include vp-1360 {
+            width: 663px;
+            height: 713px;
+            left: calc((-100vw + 1360px)/2);
+            background-image: url("../img/tablet/blur/blur-tablet-7.png");
+        }
+
+        @include vp-1920 {
+            right: calc((-100vw + 1920px)/2);
+            background-image: url("../img/desktop/blur/blur-7.png");
         }
     }
 
@@ -294,30 +308,6 @@
             @include retina {
                 background-image: url("../img/desktop/map@2x.jpg");
             }
-        }
-
-        &::before {
-            width: 682px;
-            height: 691px;
-            filter: blur(125px);
-            -webkit-filter: blur(125px);
-            -moz-filter: blur(125px);
-            -ms-filter: blur(125px);
-            bottom: -288px;
-            right: -600px;
-            transform: rotate(10deg);
-        }
-
-        &::after {
-            width: 396px;
-            height: 394px;
-            filter: blur(125px);
-            -webkit-filter: blur(125px);
-            -moz-filter: blur(125px);
-            -ms-filter: blur(125px);
-            transform: rotate(352deg);
-            bottom: 100px;
-            left: 0;
         }
     }
 
