@@ -119,7 +119,7 @@
         }
 
         &__button {
-            margin-bottom: 0;
+            margin-bottom: 80px;
         }
 
         @media only screen and (min-height: 768px) {
@@ -129,6 +129,10 @@
             -webkit-box-orient: horizontal;
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
+
+            &__button {
+                margin-bottom: 0;
+            }
 
             &__upcoming-event {
                 position: absolute;
