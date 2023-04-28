@@ -9,7 +9,8 @@
 
 .button-primary {
     max-width: 208px;
-    height: fit-content;
+    height: auto;
+    min-height: 54px;
     padding: 13px 40px 17px;
     font-family: $ff-mabry-pro-medium;
     font-size: 16px;
@@ -32,13 +33,16 @@
 
     @include vp-1024 {
         width: 208px;
+        min-height: 58px;
+        padding: 15px 40px 18px;
     }
 }
 
 .button-secondary {
     position: relative;
     max-width: 208px;
-    height: fit-content;
+    height: auto;
+    min-height: 55px;
     padding: 15px 40px;
     font-family: $ff-mabry-pro-medium;
     font-weight: 400;
