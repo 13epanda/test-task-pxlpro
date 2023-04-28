@@ -101,14 +101,15 @@
     }
 
     &__map {
+        position: relative;
         grid-column: 1/-1;
         height: calc(100vw - 30px);
         min-height: 344px;
         max-height: 560px;
         -webkit-border-radius: 16px;
         -moz-border-radius: 16px;
-        border-radius: 16px;
         -khtml-border-radius: 16px;
+        border-radius: 16px;
         -webkit-backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         overflow: hidden;
@@ -117,6 +118,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        z-index: 1;
 
         @include retina {
             background-image: url("../img/mobile/map@2x.jpg");
