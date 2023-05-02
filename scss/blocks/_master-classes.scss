@@ -3,34 +3,72 @@
     padding-top: 74px;
     padding-bottom: 59px;
 
-    h2 {
-        margin-bottom: 62px;
-    }
-
+    &::before,
     &::after {
         position: absolute;
         content: "";
         background-size: contain;
         background-repeat: no-repeat;
-        bottom: -100px;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+        width: 363px;
+        height: 502px;
+        background-image: url("../img/mobile/blur/blur-1.png");
+        background-position: right;
+
+        @include vp-1360 {
+            width: 757px;
+            height: 982px;
+            top: 17px;
+            background-image: url("../img/tablet/blur/blur-tablet-1.png");
+        }
+
+        @include vp-1920 {
+            width: 1117px;
+            height: 1114px;
+            right: calc((100% - 1488px) / 2 - 197px);
+            background-image: url("../img/desktop/blur/blur-1.png");
+        }
+    }
+
+    &::after {
+        bottom: 0;
         right: 0;
         width: 353px;
         height: 484px;
         background-image: url("../img/mobile/blur/blur-3.png");
         background-position: right;
+        -ms-transform: translateY(25%);
+        -webkit-transform: translateY(25%);
+        -moz-transform: translateY(25%);
+        -o-transform: translateY(25%);
         transform: translateY(25%);
 
         @include vp-1360 {
             width: 786px;
             height: 945px;
-            right: calc((-100vw + 1360px)/2);
             background-image: url("../img/tablet/blur/blur-tablet-3.png");
         }
 
         @include vp-1920 {
-            right: calc((-100vw + 1488px)/2);
+            width: 982px;
+            right: calc((100% - 1488px) / 2 - 197px);
             background-image: url("../img/desktop/blur/blur-3.png");
         }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    h2 {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 62px;
     }
 
     &__list {
@@ -42,65 +80,43 @@
         grid-template-rows: auto;
         row-gap: 16px;
 
-        &::before,
-        &::after {
+        &::before {
             position: absolute;
             content: "";
             background-size: contain;
             background-repeat: no-repeat;
-
-        }
-
-        &::before {
-            top: -104px;
-            right: -16px;
-            width: 363px;
-            height: 502px;
-            background-image: url("../img/mobile/blur/blur-1.png");
-            background-position: right;
-            transform: translateY(-25%);
-
-            @include vp-768 {
-                right: -64px;
-            }
-
-            @include vp-1360 {
-                width: 757px;
-                height: 982px;
-                top: 17px;
-                right: calc((-100vw + 1234px)/2);
-                background-image: url("../img/tablet/blur/blur-tablet-1.png");
-            }
-
-            @include vp-1920 {
-                right: calc((-100vw + 1267px)/2);
-                background-image: url("../img/desktop/blur/blur-1.png");
-            }
-        }
-
-        &::after {
             width: 375px;
             height: 570px;
             top: 50%;
             left: -16px;
             background-image: url("../img/mobile/blur/blur-2.png");
             background-position: left;
-            transform: translateY(-25%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
 
             @include vp-768 {
                 left: -64px;
             }
 
             @include vp-1360 {
-                width: 842px;
-                height: 1114px;
-                top: 92px;
-                left: calc((-100vw + 1234px)/2);
+                width: 786px;
+                height: 945px;
+                top: 0;
+                left: calc((-100vw + 1232px)/2);
                 background-image: url("../img/tablet/blur/blur-tablet-2.png");
+                -ms-transform: translateY(-20%);
+                -webkit-transform: translateY(-20%);
+                -moz-transform: translateY(-20%);
+                -o-transform: translateY(-20%);
+                transform: translateY(-20%);
             }
 
             @include vp-1920 {
-                left: calc((-100vw + 1232px)/2);
+                width: 948px;
+                left: calc((100% - 1488px)/2 - 197px);
                 background-image: url("../img/desktop/blur/blur-2.png");
             }
         }
@@ -151,8 +167,6 @@
         &__button {
             margin-top: auto;
         }
-
-
     }
 
     @include vp-1024 {
@@ -161,9 +175,6 @@
 
         h2 {
             margin-bottom: 83px;
-        }
-
-        &__list {
         }
 
         &__item {

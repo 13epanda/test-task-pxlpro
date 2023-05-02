@@ -34,7 +34,7 @@
             <section class="page-header__wrapper page-content">
                 <h2 class="visually-hidden">Меню навигации по сайту.</h2>
                 <div class="page-header__wrapper-nav">
-                   <a class="page-header__logo" href="">
+                    <a class="page-header__logo" href="">
                         <svg width="55" height="55" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.658 38V17.07h-8.67l-4.485 17.522-4.485-17.521h-8.67V38h4.783V19.582L23.915 38h7.176l4.783-18.418V38h4.784Z" fill="#89B2FF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 50C39.926 50 50 39.926 50 27.5S39.926 5 27.5 5 5 15.074 5 27.5 15.074 50 27.5 50Zm0 5C42.688 55 55 42.688 55 27.5S42.688 0 27.5 0 0 12.312 0 27.5 12.312 55 27.5 55Z" fill="#89B2FF"/></svg>
                     </a>
                     <nav class="page-header__nav">
@@ -71,7 +71,7 @@
             </section>
         </header>
         <main>
-            <section class="main container">
+            <section class="main">
                 <picture>
                     <source type="image/webp" media="(min-width: 1920px)" srcset="img/desktop/main.webp, img/desktop/main@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 1360px)" srcset="img/tablet/main-tablet.webp, img/tablet/main-tablet@2x.webp 2x">
@@ -81,19 +81,21 @@
                     <source media="(min-width: 1360px)" srcset="img/tablet/main-tablet.png, img/tablet/main-tablet@2x.png 2x">
                     <img  class="main__image" src="img/desktop/main.png" srcset="img/desktop/main@2x.png 2x" width="887" height="549" loading="lazy" alt="Страница сайта с каталогом брендовой одежды.">
                 </picture>
-                <div class="main__content">
-                    <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
-                    <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                    <button class="main__button button button-secondary" aria-label="Открыть форму для регистрации.">
-                        <span>Записаться</span>
-                    </button>
+                <div class="main__wrapper container">
+                    <div class="main__content">
+                        <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
+                        <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
+                        <button class="main__button button button-secondary" aria-label="Открыть форму для регистрации.">
+                            <span>Записаться</span>
+                        </button>
+                    </div>
+                    <dl class="text-normal main__upcoming-event">
+                        <dt>Ближайший мастер-класс</dt>
+                        <dd>офлайн</dd>
+                        <dd>14 сентября</dd>
+                        <dd>11:00</dd>
+                    </dl>
                 </div>
-                <dl class="text-normal main__upcoming-event">
-                    <dt>Ближайший мастер-класс</dt>
-                    <dd>офлайн</dd>
-                    <dd>14 сентября</dd>
-                    <dd>11:00</dd>
-                </dl>
             </section>
             <section class="about container" id="about" data-nav="0">
                 <h2 class="title-h2">О&nbsp;чем это</h2>
@@ -122,41 +124,44 @@
                     </div>
                 </div>
             </section>
-            <section class="master-classes container" id="master-classes" data-nav="1">
-                <h2 class="title-h2">Мастер-классы</h2>
-                <ul class="master-classes__list">
-                    <li class="master-classes__item">
-                        <h3 class="title-h3">Экономия на&nbsp;онлайн&#8209;шопинге</h3>
-                        <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
-                            Записаться
-                        </button>
-                    </li>
-                    <li class="master-classes__item">
-                        <h3 class="title-h3">Мастер-класс</h3>
-                        <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
-                            Записаться
-                        </button>
-                    </li>
-                    <li class="master-classes__item">
-                        <h3 class="title-h3">Лучшие площадки</h3>
-                        <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Эта парадигматическая страна, в&nbsp;которой жаренные члены предложения залетают прямо в&nbsp;рот.</p>
-                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
-                            Записаться
-                        </button>
-                    </li>
-                    <li class="master-classes__item">
-                        <h3 class="title-h3">Мастер-класс</h3>
-                        <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
-                        <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
-                            Записаться
-                        </button>
-                    </li>
-                </ul>
+            <section class="master-classes" id="master-classes" data-nav="1">
+                <div class="master-classes__wrapper container">
+                    <h2 class="title-h2">Мастер-классы</h2>
+                    <ul class="master-classes__list">
+                        <li class="master-classes__item">
+                            <h3 class="title-h3">Экономия на&nbsp;онлайн&#8209;шопинге</h3>
+                            <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
+                            <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
+                                Записаться
+                            </button>
+                        </li>
+                        <li class="master-classes__item">
+                            <h3 class="title-h3">Мастер-класс</h3>
+                            <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
+                            <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
+                                Записаться
+                            </button>
+                        </li>
+                        <li class="master-classes__item">
+                            <h3 class="title-h3">Лучшие площадки</h3>
+                            <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана. Эта парадигматическая страна, в&nbsp;которой жаренные члены предложения залетают прямо в&nbsp;рот.</p>
+                            <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
+                                Записаться
+                            </button>
+                        </li>
+                        <li class="master-classes__item">
+                            <h3 class="title-h3">Мастер-класс</h3>
+                            <p class="text-normal">Далеко-далекоза&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты. Вдали от&nbsp;всех живут они в&nbsp;буквенных домах на&nbsp;берегу Семантика большого языкового океана.</p>
+                            <button class="master-classes__button button button-primary" aria-label="Открыть форму для регистрации.">
+                                Записаться
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            <section class="gallery container" id="gallery" data-nav="2">
-                <h2 class="title-h2">Галерея</h2>
+            <section class="gallery" id="gallery" data-nav="2">
+                <div class="gallery__wrapper container">
+                    <h2 class="title-h2">Галерея</h2>
                     <ul class="gallery__list">
                         <li class="gallery__item">
                             <picture>
@@ -204,37 +209,40 @@
                             </picture>
                         </li>
                     </ul>
+                </div>
             </section>
         </main>
         <footer>
-            <section class="upcoming-event page-content" id="upcoming-event" data-nav="3">
-                <h2 class="title-h2">Ближайший мастер&#8209;класс</h2>
-                <div class="upcoming-event__wrapper">
-                    <dl class="upcoming-event__date">
-                        <dt class="text-small">Дата</dt>
-                        <dd>14 <span>сентября</span></dd>
-                    </dl>
-                    <dl class="upcoming-event__time">
-                        <dt class="text-small">Старт</dt>
-                        <dd>11<span>:</span>00</dd>
-                    </dl>
-                    <dl class="upcoming-event__place">
-                        <dt class="text-small">Место</dt>
-                        <dd>Екатеринбург, ул.&nbsp;Карла&nbsp;Либкнехта, 22, БЦ&nbsp;Консул.&nbsp;Офис 315, пространство PXL&nbsp;PRO</dd>
-                    </dl>
-                    <dl class="upcoming-event__participation">
-                        <dt class="text-small">Участие</dt>
-                        <dd>Бесплатно, по&nbsp;предварительной регистрации</dd>
-                        <dd>
-                            <em>Количество мест ограничено!</em>
-                        </dd>
-                    </dl>
-                    <div class="upcoming-event__information">
-                        <p class="text-normal">
-                            С&nbsp;парковками, признаемся, у&nbsp;нас обычно сложно, поэтому лучше приехать заранее, чтобы найти парковочное место
-                        </p>
+            <section class="upcoming-event" id="upcoming-event" data-nav="3">
+                <div class="upcoming-event__wrapper page-content">
+                    <h2 class="title-h2">Ближайший мастер&#8209;класс</h2>
+                    <div class="upcoming-event__content">
+                        <dl class="upcoming-event__date">
+                            <dt class="text-small">Дата</dt>
+                            <dd>14 <span>сентября</span></dd>
+                        </dl>
+                        <dl class="upcoming-event__time">
+                            <dt class="text-small">Старт</dt>
+                            <dd>11<span>:</span>00</dd>
+                        </dl>
+                        <dl class="upcoming-event__place">
+                            <dt class="text-small">Место</dt>
+                            <dd>Екатеринбург, ул.&nbsp;Карла&nbsp;Либкнехта, 22, БЦ&nbsp;Консул.&nbsp;Офис 315, пространство PXL&nbsp;PRO</dd>
+                        </dl>
+                        <dl class="upcoming-event__participation">
+                            <dt class="text-small">Участие</dt>
+                            <dd>Бесплатно, по&nbsp;предварительной регистрации</dd>
+                            <dd>
+                                <em>Количество мест ограничено!</em>
+                            </dd>
+                        </dl>
+                        <div class="upcoming-event__information">
+                            <p class="text-normal">
+                                С&nbsp;парковками, признаемся, у&nbsp;нас обычно сложно, поэтому лучше приехать заранее, чтобы найти парковочное место
+                            </p>
+                        </div>
+                        <div class="upcoming-event__map" id="map"></div>
                     </div>
-                    <div class="upcoming-event__map" id="map"></div>
                 </div>
             </section>
         </footer>

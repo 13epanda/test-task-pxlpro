@@ -3,17 +3,20 @@
     padding-top: 75px;
     padding-bottom: 56px;
 
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
     h2 {
         margin-bottom: 60px;
     }
 
-    &__wrapper {
-        position: relative;
+    &__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 43px;
         column-gap: 45px;
-        z-index: 1;
     }
 
     &__date,
@@ -92,6 +95,10 @@
             content: "";
             width: 96px;
             height: 96px;
+            -ms-transform: translate(32px, 32px);
+            -webkit-transform: translate(32px, 32px);
+            -moz-transform: translate(32px, 32px);
+            -o-transform: translate(32px, 32px);
             transform: translate(32px, 32px);
             background-image: url("../img/icons/attention.svg");
         }
@@ -146,12 +153,12 @@
             width: 314px;
             height: 686px;
             bottom: 0;
-            right: calc((-100vw + 1360px)/2);
             background-image: url("../img/tablet/blur/blur-tablet-6.png");
         }
 
         @include vp-1920 {
-            right: calc((-100vw + 1920px)/2);
+            width: 258px;
+            height: 646px;
             background-image: url("../img/desktop/blur/blur-6.png");
         }
     }
@@ -167,18 +174,18 @@
         @include vp-1360 {
             width: 663px;
             height: 713px;
-            left: calc((-100vw + 1360px)/2);
             background-image: url("../img/tablet/blur/blur-tablet-7.png");
         }
 
         @include vp-1920 {
-            right: calc((-100vw + 1920px)/2);
+            width: 815px;
+            height: 673px;
             background-image: url("../img/desktop/blur/blur-7.png");
         }
     }
 
     @include vp-768 {
-        &__wrapper {
+        &__content {
             grid-template-columns: 1fr 2fr;
             row-gap: 42px;
             column-gap: 48px;
@@ -250,7 +257,7 @@
             margin-bottom: 90px;
         }
 
-        &__wrapper {
+        &__content {
             grid-template-columns: 1fr 1fr 208px 336px;
             row-gap: 40px;
         }
@@ -312,7 +319,7 @@
     }
 
     @include vp-1920 {
-        &__wrapper {
+        &__content {
             grid-template-columns: 1fr 1fr 248px 427px;
         }
 
