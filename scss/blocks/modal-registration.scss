@@ -1,0 +1,20 @@
+.modal-registration {
+    .title-h2 {
+        margin-bottom: 60px;
+    }
+
+    &__input {
+        margin-bottom: 28px;
+    } 
+
+    &__list {
+        margin-top: 0;
+        padding-left: 0;
+        margin-bottom: 28px;
+    }
+
+    &__item {
+        list-style: none;
+        margin-bottom: 16px;
+    }
+}

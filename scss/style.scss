@@ -9,6 +9,7 @@
 
 // Components
 @import "components/buttons";
+@import "components/inputs";
 @import "Components/title";
 
 // Blocks
@@ -20,3 +21,5 @@
 @import "blocks/master-classes";
 @import "blocks/gallery";
 @import "blocks/upcoming-event";
+@import "blocks/modal";
+@import "blocks/modal-registration.scss";

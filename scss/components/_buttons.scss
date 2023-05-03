@@ -2,6 +2,8 @@
     display: block;
     outline: none;
     text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
     box-sizing: border-box;
     background: none;
     cursor: pointer;
@@ -11,11 +13,11 @@
     max-width: 208px;
     height: auto;
     min-height: 54px;
-    padding: 13px 40px 17px;
+    padding: 13px 40px;
     font-family: $ff-mabry-pro-medium;
     font-size: 16px;
     line-height: 23px;
-    text-align: center;
+    
     color: $color-salmon;
     border: 1px solid $color-salmon;
     border-radius: 8px;
@@ -48,7 +50,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
-    text-align: center;
     color: $color-default-white;
     background-color: $color-salmon;
     border: none;
@@ -72,6 +73,10 @@
         background-color: $color-default-white;
         color: $color-gun-powder;
         opacity: 0.3;
+
+        &::before {
+            content: none;
+        }
     }
 
     &::before {
