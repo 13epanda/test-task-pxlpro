@@ -247,12 +247,12 @@
             </section>
         </footer>
 
-        <!-- Модальное окно: Заказать звонок -->
+        <!-- Модальное окно: Регистрации -->
         <section class="modal modal--preload" data-modal="modal-registration">
-            <div class="modal__wrapper">
-                <div class="modal__overlay" data-close-modal></div>
-                <div class="modal__content modal-registration">
-                    <h2 class="title-h2">Регистрация</h2>
+            <div class="modal__wrapper modal-registration">
+                <div class="modal__overlay modal-registration__wrapper" data-close-modal></div>
+                <div class="modal__content modal-registration__content">
+                    <h2 class="title-h2 modal-registration__title">Регистрация</h2>
                     <form class="modal-registrationn__form" action="" method="get">
                         <div class="modal-registration__input input-select">
                                 <label class="text-small input-select__span">Город</label>
@@ -268,15 +268,15 @@
                         </div>
                         <div class="modal-registration__input input-text">
                             <label class="text-small input-text__span">Имя Фамилия</label>
-                            <input class="text-normal input-text__input" type="text" name="name" placeholder="Имя Фамилия" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}" required>
+                            <input class="text-normal input-text__input" type="text" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}" required>
                         </div>
                         <div class="modal-registration__input input-text input-text--phone">
                             <label class="text-small input-text__span">Телефон</label>
-                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" placeholder="Телефон" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." required>
+                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." required>
                         </div>
                         <div class="modal-registration__input input-textarea">
                             <label class="text-small input-textarea__span">Комментарий</label>
-                            <textarea class="text-normal input-textarea__input" id="comment" rows="auto" name="question" placeholder="Комментарий"></textarea>
+                            <textarea class="text-normal input-textarea__input" id="comment" rows="auto" name="question"></textarea>
                         </div>
                         <div class="modal-registration__input">
                             <p class="text-small modal-registration__subtitle">Мастер-класс</p>
@@ -348,8 +348,26 @@
                             <p class="text-normal input-range__value">0 ₽</p>
                             <input class="text-normal input-range__input" type="range" name="pay"  min="0" max="10000" value="5000" step="100" aria-label="Изменить сумму.">
                         </div>
-                        <button class="button button-secondary modal-registration__button" type="submit" disabled>Отправить</button>
+                        <div class=" modal-registration__submit-wrapper">
+                            <button class="button button-secondary modal-registration__button" type="submit" disabled>Отправить</button>
+                            <p class="text-small modal-registration__info">Нажимая на кнопку, вы соглашаетесь с 
+                                <a class="text-small modal-registration__link" href="#">Политикой обработки персональных данных</a>
+                            </p> 
+                        </div>
                     </form>
+                    <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальное окно: Успешной отправки заявки -->
+        <section class="modal modal--preload" data-modal="modal-registration-successful">
+            <div class="modal__wrapper modal-registration-successful">
+                <div class="modal__overlay" data-close-modal></div>
+                <div class="modal__content modal-registration-successful__content">
+                    <h2 class="title-h2 modal-registration-successful__title">Спасибо за заявку</h2>
+                    <p class="text-normal modal-registration-successful__text">Мы свяжемся с вами в ближайшее время</p>
+                    <button class="button button-secondary modal-registration-successful__button" type="button" aria-label="Закрыть попап" data-close-modal>Продолжить</button>
                     <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal></button>
                 </div>
             </div>

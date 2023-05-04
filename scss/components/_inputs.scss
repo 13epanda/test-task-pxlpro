@@ -10,25 +10,28 @@
 
     &__input {
         position: relative;
+        display: block;
         flex-grow: 1;
         padding-bottom: 16px;
         width: 100%;
-        height: 40px;
+        height: fit-content;
         color: $color-default-white;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid rgba($color-default-white, 0.3);
         outline: none;
+
+        &:active {
+            height: 40px;
+        }
     }
 
     &--phone {
-        &__input {
-            width: 148px;
-        }
+        max-width: 148px;
     }
 }
 
-/* TEXT */
+/* SELECT */
 .input-select {
     position: relative;
 
@@ -39,16 +42,26 @@
     }
 
     &__select {
-        position: relative;
-        flex-grow: 1;
         padding-bottom: 16px;
         width: 100%;
-        min-height: 40px;
         color: $color-default-white;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid rgba($color-default-white, 0.3);
         outline: none;
+        display: inline-block;
+        -webkit-appearance:none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+
+        option {
+            position: relative;
+            width: 60%;
+            background-color: $color-black-russian;
+            color: rgba($color-default-white, 0.5);
+            border: none;
+        }
     }
 }
 
@@ -145,11 +158,14 @@
     display: flex;
     align-items: center;
     height: 24px;
+
+    &__span {
+        width: 58px;
+    }
     
 
     &__span--on {
-        width: 58px;
-        margin-left: 72px;
+        margin-left: 56px;
         color: rgba($color-default-white, 0.5);
     }
 
@@ -206,6 +222,17 @@
     &__input:disabled,
     &__input:disabled ~ .input-switch__span {
         opacity: 0.3;
+    }
+
+    @include vp-1024 {
+        &__span {
+            width: 72px;
+        }
+
+        &__input,
+        &__mark {
+            left: 72px;
+        }
     }
 }
 
