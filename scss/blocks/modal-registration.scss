@@ -17,4 +17,14 @@
         list-style: none;
         margin-bottom: 16px;
     }
+
+    &__subtitle {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: rgba($color-default-white, 0.5);
+    }
+
+    &__button {
+        margin-top: 65px;
+    }
 }

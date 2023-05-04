@@ -256,7 +256,7 @@
                     <form class="modal-registrationn__form" action="" method="get">
                         <div class="modal-registration__input input-select">
                                 <label class="text-small input-select__span">Город</label>
-                                <select class="text-normal input-select__select" id="city" name="city" title="Выберите город." required>
+                                <select class="text-normal input-select__select" id="city" name="city" title="Город" required>
                                     <option value="Moscow">Москва</option>
                                     <option value="Saint-Petersburg">Санкт-Петербург</option>
                                     <option value="Ekaterinburg">Екатеринбург</option>
@@ -268,74 +268,86 @@
                         </div>
                         <div class="modal-registration__input input-text">
                             <label class="text-small input-text__span">Имя Фамилия</label>
-                            <input class="text-normal input-text__input" type="text" name="name" placeholder="Введите свои имя и фамилию" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}" required>
+                            <input class="text-normal input-text__input" type="text" name="name" placeholder="Имя Фамилия" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}" required>
                         </div>
                         <div class="modal-registration__input input-text input-text--phone">
                             <label class="text-small input-text__span">Телефон</label>
-                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" placeholder="Введите номер телефона" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." required>
+                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" placeholder="Телефон" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." required>
                         </div>
                         <div class="modal-registration__input input-textarea">
                             <label class="text-small input-textarea__span">Комментарий</label>
-                            <textarea class="text-normal input-textarea__input" id="comment" rows="auto" name="question" placeholder="Введите комментарий при необходимости"></textarea>
+                            <textarea class="text-normal input-textarea__input" id="comment" rows="auto" name="question" placeholder="Комментарий"></textarea>
                         </div>
-                        <ul class="modal-registration__list">
-                            <li class="modal-registration__item">
-                                <label class="input-radio">
-                                    <input class="text-normal input-radio__input" type="radio" name="master-classes" value="conservation" checked>
-                                    <span class="input-radio__mark"></span>
-                                    <span class="text-small input-radio__span">Экономия на онлайн-шопинге </span>
-                                </label>
-                            </li>
-                            <li class="modal-registration__item">
-                                <label class="input-radio">
-                                    <input class="text-normal input-radio__input" type="radio" name="master-classes" value="master-class">
-                                    <span class="input-radio__mark"></span>
-                                    <span class="text-small input-radio__span">Мастер-класс</span>
-                                </label>
-                            </li>
-                            <li class="modal-registration__item">
-                                <label class="input-radio">
-                                    <input class="text-normal input-radio__input" type="radio" name="master-classes" value="best-platform">
-                                    <span class="input-radio__mark"></span>
-                                    <span class="text-small input-radio__span">Лучшие площадки</span>
-                                </label>
-                            </li>
-                            <li class="modal-registration__item">
-                                <label class="input-radio">
-                                    <input class="text-normal input-radio__input" type="radio" name="master-classes" value="master-class2">
-                                    <span class="input-radio__mark"></span>
-                                    <span class="text-small input-radio__span">Мастер-класс</span>
-                                </label>
-                            </li>                            
-                        </ul>
-                        <ul class="modal-registration__list">
-                            <li class="modal-registration__item">
-                                <label class="input-checkbox">
-                                    <input class="text-normal input-checkbox__input" type="checkbox" name="time" value="12-14">
-                                    <span class="input-checkbox__mark"></span>
-                                    <span class="text-small input-checkbox__span">12:00 – 14:00</span>
-                                </label>
-                            </li>
-                            <li class="modal-registration__item">
-                                <label class="input-checkbox">
-                                    <input class="text-normal input-checkbox__input" type="checkbox" name="time" value="15-17">
-                                    <span class="input-checkbox__mark"></span>
-                                    <span class="text-small input-checkbox__span">15:00 – 17:00</span>
-                                </label>
-                            </li>
-                            <li class="modal-registration__item">
-                                <label class="input-checkbox">
-                                    <input class="text-normal input-checkbox__input" type="checkbox" name="time" value="19-21">
-                                    <span class="input-checkbox__mark"></span>
-                                    <span class="text-small input-checkbox__span">19:00 – 21:00</span>
-                                </label>
-                            </li>
-                        </ul>
-                        <label class="modal-registration__range input-range">
-                            <span class="text-normal input-range__span">Сколько вы готовы заплатить за мероприятие?</span>
-                            <input class="text-normal input-range__input" type="range" name="pay"  min="0" max="10000" value="5000" step="100" aria-label="Изменить сумму.">
-                            <span class="input-range__mark"></span>
+                        <div class="modal-registration__input">
+                            <p class="text-small modal-registration__subtitle">Мастер-класс</p>
+                            <ul class="modal-registration__list">
+                                <li class="modal-registration__item">
+                                    <label class="input-radio">
+                                        <input class="text-normal input-radio__input" type="radio" name="master-classes" value="conservation" checked>
+                                        <span class="input-radio__mark"></span>
+                                        <span class="text-small input-radio__span">Экономия на онлайн-шопинге </span>
+                                    </label>
+                                </li>
+                                <li class="modal-registration__item">
+                                    <label class="input-radio">
+                                        <input class="text-normal input-radio__input" type="radio" name="master-classes" value="master-class">
+                                        <span class="input-radio__mark"></span>
+                                        <span class="text-small input-radio__span">Мастер-класс</span>
+                                    </label>
+                                </li>
+                                <li class="modal-registration__item">
+                                    <label class="input-radio">
+                                        <input class="text-normal input-radio__input" type="radio" name="master-classes" value="best-platform">
+                                        <span class="input-radio__mark"></span>
+                                        <span class="text-small input-radio__span">Лучшие площадки</span>
+                                    </label>
+                                </li>
+                                <li class="modal-registration__item">
+                                    <label class="input-radio">
+                                        <input class="text-normal input-radio__input" type="radio" name="master-classes" value="master-class2">
+                                        <span class="input-radio__mark"></span>
+                                        <span class="text-small input-radio__span">Мастер-класс</span>
+                                    </label>
+                                </li>                            
+                            </ul>
+                        </div>
+                        <div class="modal-registration__input">
+                            <p class="text-small modal-registration__subtitle">Мастер-класс</p>
+                            <ul class="modal-registration__list">
+                                <li class="modal-registration__item">
+                                    <label class="input-checkbox">
+                                        <input class="text-normal input-checkbox__input" type="checkbox" name="time" value="12-14">
+                                        <span class="input-checkbox__mark"></span>
+                                        <span class="text-small input-checkbox__span">12:00 – 14:00</span>
+                                    </label>
+                                </li>
+                                <li class="modal-registration__item">
+                                    <label class="input-checkbox">
+                                        <input class="text-normal input-checkbox__input" type="checkbox" name="time" value="15-17">
+                                        <span class="input-checkbox__mark"></span>
+                                        <span class="text-small input-checkbox__span">15:00 – 17:00</span>
+                                    </label>
+                                </li>
+                                <li class="modal-registration__item">
+                                    <label class="input-checkbox">
+                                        <input class="text-normal input-checkbox__input" type="checkbox" name="time" value="19-21">
+                                        <span class="input-checkbox__mark"></span>
+                                        <span class="text-small input-checkbox__span">19:00 – 21:00</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <label class="modal-registration__input input-switch">
+                            <input class="input-switch__input" type="checkbox" name="type" required>
+                            <span class="input-switch__mark"></span>
+                            <span class="text-small input-switch__span input-switch__span--off">Онлайн</span>
+                            <span class="text-small input-switch__span input-switch__span--on">Офлайн</span>
                         </label>
+                        <div class="modal-registration__range input-range">
+                            <label class="text-normal input-range__span">Сколько вы готовы заплатить за мероприятие?</label>
+                            <p class="text-normal input-range__value">0 ₽</p>
+                            <input class="text-normal input-range__input" type="range" name="pay"  min="0" max="10000" value="5000" step="100" aria-label="Изменить сумму.">
+                        </div>
                         <button class="button button-secondary modal-registration__button" type="submit" disabled>Отправить</button>
                     </form>
                     <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal></button>

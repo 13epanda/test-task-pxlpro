@@ -54,7 +54,7 @@
     background-color: $color-salmon;
     border: none;
     border-radius: 8px;
-    box-shadow: $shadow-default-salmon;
+    box-shadow: $shadow-salmon-1;
 
     span {
         position: relative;
@@ -71,6 +71,7 @@
 
     &:disabled {
         background-color: $color-default-white;
+        box-shadow: none;
         color: $color-gun-powder;
         opacity: 0.3;
 
