@@ -1,0 +1,63 @@
+.modal-registration-successful {
+    &__title {
+        margin-right: 80px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+    }
+
+    &::before {
+        width: 355px;
+        height: 370px;
+        top: 50%;
+        left: 0;
+        background-position: left;
+        transform: translateY(-355px);
+        background-image: url("../img/mobile/blur/blur-11.png");
+    }
+
+    &::after {
+        width: 370px;
+        height: 490px;
+        bottom: 0;
+        right: 0;
+        background-position: right;
+        background-image: url("../img/mobile/blur/blur-12.png");
+    }
+
+    @include vp-768 {
+        &__title {
+            margin-bottom: 50px;
+        }
+
+        &__text {
+            margin-bottom: 62px;
+        }
+
+        &::before {
+            width: 987px;
+            height: 895px;
+            transform: translateY(-493px);
+            left: calc((100vw - 720px - 690px)/2);
+            background-image: url("../img/desktop/blur/blur-11.png");
+        }
+
+        &::after {
+            width: 757px;
+            height: 811px;
+            right: calc((100% - 720px - 578px)/2);
+            background-image: url("../img/desktop/blur/blur-12.png");
+        }
+    }
+}
