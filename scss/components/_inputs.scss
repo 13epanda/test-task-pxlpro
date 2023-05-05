@@ -29,6 +29,12 @@
     &--phone {
         max-width: 148px;
     }
+
+    @include vp-768 {
+        &--phone {
+            max-width: 256px; 
+        }
+    }
 }
 
 /* SELECT */
