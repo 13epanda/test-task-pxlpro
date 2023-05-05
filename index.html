@@ -7,11 +7,11 @@
         <meta name="theme-color" content="#0C0B31">
         <title>Мастер-классы по онлайн-шопингу</title>
 
-        <link rel="preload" href="fonts/mabry-pro.otf" as="font" crossorigin="anonymous">
-        <link rel="preload" href="fonts/mabry-pro-light.otf" as="font" crossorigin="anonymous">
-        <link rel="preload" href="fonts/mabry-pro-medium.otf" as="font" crossorigin="anonymous">
-        <link rel="preload" href="fonts/mabry-pro-bold.otf" as="font" crossorigin="anonymous">
-        <link rel="preload" href="fonts/mabry-pro-black.otf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-light.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-medium.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-bold.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/mabry-pro-black.woff2" as="font" crossorigin="anonymous">
 
         <link rel="stylesheet" href="css/style.min.css" type="text/css">
 
@@ -60,12 +60,12 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav> 
+                    </nav>
                 </div>
                 <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
                     <span></span>
                 </button>
-                <button class="page-header__button button button-primary" aria-label="Открыть форму для регистрации.">
+                <button class="page-header__button button button-primary" aria-label="Открыть форму для регистрации."  data-open-modal="modal-registration">
                     Записаться
                 </button>
             </section>
@@ -85,7 +85,7 @@
                     <div class="main__content">
                         <h1 class="title-h1">Мастер-классы по&nbsp;онлайн-шопингу</h1>
                         <p class="text-normal">Далеко-далеко за&nbsp;словесными горами в&nbsp;стране гласных и&nbsp;согласных живут рыбные тексты.</p>
-                        <button class="main__button button button-secondary" aria-label="Открыть форму для регистрации.">
+                        <button class="main__button button button-secondary" aria-label="Открыть форму для регистрации." data-open-modal="modal-registration">
                             <span>Записаться</span>
                         </button>
                     </div>
@@ -248,7 +248,7 @@
         </footer>
 
         <!-- Модальное окно: Регистрации -->
-        <section class="modal modal--preload" data-modal="modal-registration">
+        <section class="modal modal--preload" data-modal="modal-registration" data-validate>
             <div class="modal__wrapper modal-registration">
                 <div class="modal__overlay modal-registration__wrapper" data-close-modal></div>
                 <div class="modal__content modal-registration__content">
@@ -272,7 +272,7 @@
                         </div>
                         <div class="modal-registration__input input-text input-text--phone">
                             <label class="text-small input-text__span">Телефон</label>
-                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." required>
+                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." data-validate-type="phone" required>
                         </div>
                         <div class="modal-registration__input input-textarea">
                             <label class="text-small input-textarea__span">Комментарий</label>
@@ -308,7 +308,7 @@
                                         <span class="input-radio__mark"></span>
                                         <span class="text-small input-radio__span">Мастер-класс</span>
                                     </label>
-                                </li>                            
+                                </li>
                             </ul>
                         </div>
                         <div class="modal-registration__input">
@@ -350,9 +350,9 @@
                         </div>
                         <div class=" modal-registration__submit-wrapper">
                             <button class="button button-secondary modal-registration__button" type="submit" disabled>Отправить</button>
-                            <p class="text-small modal-registration__info">Нажимая на кнопку, вы соглашаетесь с 
+                            <p class="text-small modal-registration__info">Нажимая на кнопку, вы соглашаетесь с
                                 <a class="text-small modal-registration__link" href="#">Политикой обработки персональных данных</a>
-                            </p> 
+                            </p>
                         </div>
                     </form>
                     <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal></button>
