@@ -1,6 +1,6 @@
 import {initVh} from './utils/init-vh.js';
 import {initModals} from './modules/init-modals.js';
-import {initPhoneMask, initJsPhoneMask} from './modules/phone-mask.js';
+import {initForm} from './modules/form/init-form.js';
 import {smoothScroll} from './modules/smooth-scroll.js';
 import {initHeaderNav, scrollNav} from './modules/header-nav.js';
 import {initMap} from './modules/map.js';
@@ -20,10 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeaderNav();
     scrollNav();
     initModals();
-    initPhoneMask();
-    initJsPhoneMask();
-
-    
+    initForm();
 
     window.addEventListener('load', () => {
       ymaps.ready(initMap);

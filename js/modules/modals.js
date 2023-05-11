@@ -1,9 +1,9 @@
-//import {ScrollLock} from '../utils/scroll-lock.js';
+import {ScrollLock} from '../utils/scroll-lock.js';
 import {FocusLock} from '../utils/focus-lock.js';
 
 export class Modals {
   constructor(settings = {}) {
-   // this._scrollLock = new ScrollLock();
+    this._scrollLock = new ScrollLock();
     this._focusLock = new FocusLock();
 
     this._modalOpenElements = document.querySelectorAll('[data-open-modal]');
@@ -152,9 +152,9 @@ export class Modals {
     this._setSettings(modalName);
     modal.classList.add('is-active');
 
-    /*if (!this._openedModalElement && this._modalName !== 'location-suggestion') {
+    if (!this._openedModalElement && this._modalName !== 'location-suggestion') {
       this._scrollLock.disableScrolling();
-    }*/
+    }
 
     if (this._openCallback) {
       this._openCallback();
@@ -191,11 +191,11 @@ export class Modals {
       this._closeCallback();
     }
 
-    /*if (this._enableScrolling) {
+    if (this._enableScrolling) {
       setTimeout(() => {
         this._scrollLock.enableScrolling();
       }, this._eventTimeout);
-    }*/
+    }
 
     setTimeout(() => {
       document.addEventListener('click', this._documentClickHandler);

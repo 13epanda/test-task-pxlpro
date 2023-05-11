@@ -2,17 +2,6 @@ import {Modals} from './modals.js';
 
 let modals;
 
-// Здесь реализован пример открытия модалки через колбэк закрытия
-// const openModalInCloseCallback = (name, context = this) => {
-//   context._enableScrolling = false;
-//   context._setSettings('default');
-//   modals.open(name);
-// };
-
-// closeCallback() {
-//   openModalInCloseCallback('modal-5');
-// },
-
 const settings = {
   'default': {
     preventDefault: true,
@@ -40,15 +29,4 @@ const initModals = () => {
   window.modals = modals;
 };
 
-function initModalProductFeedback() {
-  const modalElements = document.querySelectorAll('.reviews-tire__feedback');
-  if (modalElements.length) {
-    modalElements.forEach((el) => {
-      setTimeout(() => {
-        el.click();
-      }, 10000);
-    });
-  }
-}
-
-export {modals, initModals, initModalProductFeedback};
+export {modals, initModals};
