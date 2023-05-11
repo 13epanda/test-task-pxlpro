@@ -42,11 +42,18 @@
     }
 
     &__submit-wrapper {
+        position: relative;
         margin-top: 65px;
     }
 
     &__button {
         margin-bottom: 27px;
+    }
+
+    &__loader {
+        position: absolute;
+        top: 12px;
+        left: 63px;
     }
 
     &__info {
@@ -129,6 +136,10 @@
             margin-bottom: 0;
         }
 
+        &__loader {
+            left: 23px;
+        }
+
         &::before {
             width: 987px;
             height: 908px;
@@ -142,6 +153,12 @@
             height: 1060px;
             right: calc((100% - 720px - 578px)/2);
             background-image: url("../img/desktop/blur/blur-9.png");
+        }
+    }
+
+    @include vp-1024 {
+        &__loader {
+            left: 83px;
         }
     }
 }

@@ -1,9 +1,19 @@
 /* TEXT */
 .input-text {
     position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
 
     &__span {
-        display: block;
+        display: none;
         margin-bottom: 11px;
         color: rgba($color-default-white, 0.5);
     }
@@ -24,6 +34,18 @@
         &:active {
             height: 40px;
         }
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba($color-default-white, 0.5);
+        }
+
+        &:not(:placeholder-shown) {
+            ~.input-text__span {
+                display: block;
+            }
+        }
     }
 
     &--phone {
@@ -31,8 +53,15 @@
     }
 
     @include vp-768 {
+        &__input {
+            &:placeholder {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+
         &--phone {
-            max-width: 256px; 
+            max-width: 256px;
         }
     }
 }
@@ -40,6 +69,8 @@
 /* SELECT */
 .input-select {
     position: relative;
+    display: block;
+    width: 100%;
 
     &__span {
         display: block;
@@ -48,6 +79,10 @@
     }
 
     &__select {
+        position: absolute;
+        z-index: 10;
+        opacity: 0;
+        height: 50px;
         padding-bottom: 16px;
         width: 100%;
         color: $color-default-white;
@@ -63,11 +98,94 @@
 
         option {
             position: relative;
-            width: 60%;
+            opacity: 0;
+            z-index: 10;
             background-color: $color-black-russian;
             color: rgba($color-default-white, 0.5);
             border: none;
         }
+    }
+
+    &__head {
+        position: relative;
+        padding-bottom: 16px;
+        width: 100%;
+        //color: rgba($color-default-white, 0.5);
+        color: $color-default-white;
+        background-color: $color-transparent;
+        border: none;
+        border-bottom: 1px solid rgba($color-default-white, 0.3);
+        outline: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    &__head::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 16px;
+        display: block;
+        width: 10px;
+        height: 6px;
+        background-image: url('../../img/icons/arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: $trans-default;
+    }
+
+    &__head.open::after {
+        transform: rotate(180deg);
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: $color-black-russian;
+        border-radius: 8px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        padding: 16px;
+        max-height: 272px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 5;
+        color: rgba($color-default-white, 0.5);
+        scrollbar-color: $color-black-russian;
+        scrollbar-width: thin;
+        overscroll-behavior: contain;
+    }
+
+    &__list::-webkit-scrollbar {
+        width: 7px;
+        background-color: $color-black-russian;
+        padding: 5px;
+    }
+
+    &__list::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $color-black-russian;
+    }
+
+    &__head.open {
+        ~.input-select__list {
+            display: block;
+        }
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+        list-style-type: none;
+        margin-bottom: 16px;
+    }
+
+    &__item:hover {
+        color: $color-default-white;
     }
 }
 
@@ -75,21 +193,55 @@
 /* AREA */
 
 .input-textarea {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: column-reverse;
+    -webkit-box-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+
     &__span {
-        display: block;
+        display: none;
         margin-bottom: 11px;
         color: rgba($color-default-white, 0.5);
     }
 
     &__input {
         width: 100%;
-        height: fit-content;
+        height: auto;
         padding-bottom: 16px;
         color: $color-default-white;
         background-color: transparent;
         border: none;
         outline: none;
+        resize: none;
+        overflow: hidden;
         border-bottom: 1px solid rgba($color-default-white, 0.3);
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba($color-default-white, 0.5);
+        }
+
+        &:not(:placeholder-shown) {
+            ~.input-textarea__span {
+                display: block;
+            }
+        }
+    }
+
+    @include vp-768 {
+        &__input {
+            &:placeholder {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
     }
 }
 
@@ -168,7 +320,7 @@
     &__span {
         width: 58px;
     }
-    
+
 
     &__span--on {
         margin-left: 56px;
@@ -310,6 +462,8 @@
     position: relative;
     width: 100%;
     cursor: pointer;
+    border: none;
+    box-sizing: border-box;
 
     &__span {
         display: block;
@@ -317,78 +471,59 @@
         color: rgba($color-default-white, 0.5);
     }
 
-    &__input {
-        -webkit-appearance: none;
-        appearance: none;
-        margin: 0;
-        width: 100%;
-        height: 1px;
-        border-radius: 0.5px;
-        background-color: rgba($color-default-white, 0.3);
-    }
-
     &__value {
         margin-top: 0;
         margin-bottom: 4px;
     }
 
-    &__input::-webkit-slider-thumb {
-        -webkit-appearance: none;
+    &__wrapper {
         position: relative;
-        appearance: none;
         height: 23px;
-        width: 23px;
-        margin-top: -1px;
-        border-radius: 11.5px;
-        background: $color-salmon;
-        box-shadow: $shadow-salmon-2;
-        margin-top: -1px;
-        background: $color-salmon;
-        cursor: ew-resize;
-        border: none;
-        outline: none;
+        margin-bottom: 66px;
     }
 
-    &__input::-moz-range-track {
-        width: 50%;
+    &__input {
+        z-index: 5;
+        opacity: 0;
+        margin: auto;
+        width: 100%;
+        height: 23px;
+    }
+
+    &__track {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        border-radius: 0.5px;
+        background-color: rgba($color-default-white, 0.3);
+    }
+
+    &__track--chosen {
+        width: 0;
         height: 3px;
-        border-radius: 2px;
-        cursor: pointer;
         background: $color-salmon;
         box-shadow: $shadow-salmon-2;
-        box-sizing: border-box;
-    }
-    &__input::-moz-range-thumb {
-        height: 23px;
-        width: 23px;
-        margin-top: -11.5px;
-        border-radius: 11.5px;
-        background-color: $color-salmon;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        box-shadow: $shadow-salmon-2;
+        border-radius: 2px;
     }
 
-    &__input::-ms-track {
-        width: 50%;
-        height: 3px;
-        border-radius: 2px;
-        cursor: pointer;
+    .input-range__thumb {
+        position: absolute;
+        display: block;
+        margin: auto 0;
+        top: 0;
+        height: 23px;
+        width: 23px;
+        box-sizing: border-box;
         background: $color-salmon;
         box-shadow: $shadow-salmon-2;
-        box-sizing: border-box;
+        border-radius: 11.5px;
     }
 
-    &__input::-ms-thumb {
-        height: 23px;
-        width: 23px;
-        margin-top: -11.5px;
-        border-radius: 11.5px;
-        background-color: $color-salmon;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        box-shadow: $shadow-salmon-2;
+    @include vp-768 {
+
     }
+
 }

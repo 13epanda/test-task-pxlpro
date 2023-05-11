@@ -20,7 +20,7 @@
         background-position: left;
 
         @include vp-1024 {
-            top: 0px;
+            top: 0;
         }
 
         @include vp-1360 {
@@ -116,7 +116,18 @@
         }
 
         &:last-child {
+            position: relative;
             margin-right: 16px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: -16px;
+                width: 16px;
+                height: 100%;
+
+            }
         }
     }
 
@@ -155,6 +166,10 @@
             &:first-child,
             &:last-child {
                 margin: 0;
+            }
+
+            &:last-child::after {
+                content: none;
             }
         }
     }
