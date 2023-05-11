@@ -248,35 +248,45 @@
         </footer>
 
         <!-- Модальное окно: Регистрации -->
-        <section class="modal modal--preload" data-modal="modal-registration" data-validate>
-            <div class="modal__wrapper modal-registration">
+        <section class="modal modal--preload  modal-registration" data-modal="modal-registration" data-validate>
+            <div class="modal__wrapper">
                 <div class="modal__overlay modal-registration__wrapper" data-close-modal></div>
                 <div class="modal__content modal-registration__content">
                     <h2 class="title-h2 modal-registration__title">Регистрация</h2>
-                    <form class="modal-registrationn__form" action="" method="get">
+                    <form class="modal-registrationn__form" action="" autocomplete="off">
                         <div class="modal-registration__input input-select">
-                                <label class="text-small input-select__span">Город</label>
-                                <select class="text-normal input-select__select" id="city" name="city" title="Город" required>
-                                    <option value="Moscow">Москва</option>
-                                    <option value="Saint-Petersburg">Санкт-Петербург</option>
-                                    <option value="Ekaterinburg">Екатеринбург</option>
-                                    <option value="Samara">Самара</option>
-                                    <option value="Irkutsk">Иркутск</option>
-                                    <option value="Novosibirsk">Новосибирск</option>
-                                    <option value="Vladivostok">Владивосток</option>
-                                </select>
+                            <label class="text-small input-select__span">Город</label>
+                            <select class="visually-hidden text-normal input-select__select" id="city" name="city" title="Город" required>
+                                <option value="Moscow">Москва</option>
+                                <option value="Saint-Petersburg">Санкт-Петербург</option>
+                                <option value="Ekaterinburg">Екатеринбург</option>
+                                <option value="Samara">Самара</option>
+                                <option value="Irkutsk">Иркутск</option>
+                                <option value="Novosibirsk">Новосибирск</option>
+                                <option value="Vladivostok">Владивосток</option>
+                            </select>
+                            <div class="text-normal input-select__head">Москва</div>
+                            <ul class="text-normal input-select__list">
+                                <li class="input-select__item">Москва</li>
+                                <li class="input-select__item">Санкт-Петербург</li>
+                                <li class="input-select__item">Екатеринбург</li>
+                                <li class="input-select__item">Самара</li>
+                                <li class="input-select__item">Иркутск</li>
+                                <li class="input-select__item">Новосибирск</li>
+                                <li class="input-select__item">Владивосток</li>
+                            </ul>
                         </div>
                         <div class="modal-registration__input input-text">
+                            <input class="text-normal input-text__input" type="text" name="name" placeholder="Имя Фамилия" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}" required>
                             <label class="text-small input-text__span">Имя Фамилия</label>
-                            <input class="text-normal input-text__input" type="text" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]{2,}" required>
                         </div>
                         <div class="modal-registration__input input-text input-text--phone">
+                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" placeholder="Телефон" pattern="^\+7[\s]\d{3}[\s]\d{3}[-]\d{2}[-]\d{2}$" title="Используйте формат: +7 123 456-78-90." data-validate-type="phone" required>
                             <label class="text-small input-text__span">Телефон</label>
-                            <input class="text-normal input-text__input" id="phone" type="tel" name="phone" pattern="\+7[\(]\d{3}[\)]\d{3}[-]\d{2}[-]\d{2}" title="Используйте формат: +7(123)456-78-90." data-validate-type="phone" required>
                         </div>
                         <div class="modal-registration__input input-textarea">
+                            <textarea class="text-normal input-textarea__input" id="comment" rows="1" name="question" placeholder="Комментарий"></textarea>
                             <label class="text-small input-textarea__span">Комментарий</label>
-                            <textarea class="text-normal input-textarea__input" id="comment" rows="auto" name="question"></textarea>
                         </div>
                         <div class="modal-registration__input">
                             <p class="text-small modal-registration__subtitle">Мастер-класс</p>
@@ -338,7 +348,7 @@
                             </ul>
                         </div>
                         <label class="modal-registration__input input-switch">
-                            <input class="input-switch__input" type="checkbox" name="type" required>
+                            <input class="input-switch__input" type="checkbox" name="type">
                             <span class="input-switch__mark"></span>
                             <span class="text-small input-switch__span input-switch__span--off">Онлайн</span>
                             <span class="text-small input-switch__span input-switch__span--on">Офлайн</span>
@@ -346,10 +356,18 @@
                         <div class="modal-registration__range input-range">
                             <label class="text-normal input-range__span">Сколько вы готовы заплатить за мероприятие?</label>
                             <p class="text-normal input-range__value">0 ₽</p>
-                            <input class="text-normal input-range__input" type="range" name="pay"  min="0" max="10000" value="5000" step="100" aria-label="Изменить сумму.">
+                            <div class="input-range__wrapper">
+                                <div class="input-range__track"></div>
+                                <div class="input-range__track input-range__track--chosen"></div>
+                                <input class="text-normal input-range__input" type="range" name="pay"  min="0" max="10000" value="0" step="100" aria-label="Изменить сумму.">
+                                <div class="input-range__thumb">
+                                    <span class="visually-hidden">Изменить цену.</span>
+                                </div>
+                            </div>
                         </div>
                         <div class=" modal-registration__submit-wrapper">
                             <button class="button button-secondary modal-registration__button" type="submit" disabled>Отправить</button>
+                            <div class="visually-hidden loader modal-registration__loader"></div>
                             <p class="text-small modal-registration__info">Нажимая на кнопку, вы соглашаетесь с
                                 <a class="text-small modal-registration__link" href="#">Политикой обработки персональных данных</a>
                             </p>
