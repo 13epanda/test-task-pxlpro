@@ -31,10 +31,6 @@
         border-bottom: 1px solid rgba($color-default-white, 0.3);
         outline: none;
 
-        &:active {
-            height: 40px;
-        }
-
         &::placeholder {
             font-size: 16px;
             line-height: 24px;
@@ -320,7 +316,6 @@
         width: 58px;
     }
 
-
     &__span--on {
         margin-left: 56px;
         color: rgba($color-default-white, 0.5);
@@ -520,9 +515,4 @@
         box-shadow: $shadow-salmon-2;
         border-radius: 11.5px;
     }
-
-    @include vp-768 {
-
-    }
-
 }
