@@ -14,6 +14,7 @@ const clearForm = () => {
     formRegistration.reset();
     resetRange();
     resetSelect();
+    modal.querySelector('.modal-registration__button').setAttribute("disabled", "");
 };
 
 const checkValidity = (event) => {
