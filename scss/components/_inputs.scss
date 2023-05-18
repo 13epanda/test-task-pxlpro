@@ -145,7 +145,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: $color-black-russian;
+        background: $color-paua;
         border-radius: 8px;
         margin-top: 8px;
         margin-bottom: 0;
@@ -161,13 +161,12 @@
     }
 
     &__list::-webkit-scrollbar {
-        width: 7px;
-        background-color: $color-black-russian;
-        padding: 5px;
+        width: 3px;
+        padding: 16px;
     }
 
     &__list::-webkit-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: $color-black-russian;
     }
 
