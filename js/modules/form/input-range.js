@@ -20,7 +20,7 @@ const changeRange = () => {
 }
 
 const initRange = () => {
-  inputRange.addEventListener('change', changeRange);
+  inputRange.addEventListener('input', changeRange);
 }
 
 const resetRange = () => {
