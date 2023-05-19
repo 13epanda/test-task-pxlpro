@@ -25,12 +25,7 @@
         <script src="js/main.js" type="module"></script>
     </head>
     <body class="wrapper">
-        <!--
-            При инициализации header-nav.js
-            добавляется класс page-header--closed
-            при клике на кнопку page-header__toggle класс меняется на page-header--opened
-            -->
-        <header class="page-header">
+        <header class="page-header page-header--closed">
             <section class="page-header__wrapper page-content">
                 <h2 class="visually-hidden">Меню навигации по сайту.</h2>
                 <div class="page-header__wrapper-nav">
@@ -79,7 +74,7 @@
 
                     <source media="(min-width: 1920px)" srcset="img/desktop/main.png, img/desktop/main@2x.png 2x">
                     <source media="(min-width: 1360px)" srcset="img/tablet/main-tablet.png, img/tablet/main-tablet@2x.png 2x">
-                    <img  class="main__image" src="img/mobile/main.png" srcset="img/mobile/main@2x.png 2x" width="960" height="1073" loading="lazy" alt="Страница сайта с каталогом брендовой одежды.">
+                    <img  class="main__image" src="img/mobile/main.png" srcset="img/mobile/main@2x.png 2x" width="960" height="1073" alt="Страница сайта с каталогом брендовой одежды.">
                 </picture>
                 <div class="main__wrapper container">
                     <div class="main__content">

@@ -22,8 +22,6 @@ const openMenu = () => {
 }
 
 const initHeaderNav = () => {
-    navMain.classList.add('page-header--closed');
-
     navToggle.addEventListener('click', function() {
         if (navMain.classList.contains('page-header--closed')) {
             openMenu();
@@ -45,7 +43,7 @@ const scrollNav = () => {
         const heightMenu = document.querySelector('.page-header__nav').clientHeight + 10;
         const screenHeight = document.documentElement.clientHeight;
         const bodyHeight = document.body.clientHeight;
-        
+
         let positionSelects = [];
         let currentActive = null;
 
