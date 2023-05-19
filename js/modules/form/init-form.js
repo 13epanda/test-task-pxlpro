@@ -7,7 +7,7 @@ import {initSelect, resetSelect} from './select.js';
 
 
 const modal = document.querySelector('.modal-registration');
-const formRegistration = modal.querySelector('.modal-registrationn__form');
+const formRegistration = modal.querySelector('.modal-registration__form');
 const select = formRegistration.querySelector('.input-select__select');
 
 const clearForm = () => {
@@ -42,7 +42,7 @@ const serializeForm = (formNode) => {
             data.append(name, value);
     });
     console.log(Array.from(data.entries()))
-    return data;    
+    return data;
 }
 
 const onFormSuccessSent = () => {
