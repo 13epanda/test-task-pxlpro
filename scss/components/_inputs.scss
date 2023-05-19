@@ -42,6 +42,11 @@
                 display: block;
             }
         }
+
+        &:focus,
+        &:hover {
+            border-color: rgba($color-default-white, 0.5);
+        }
     }
 
     &--phone {
@@ -99,6 +104,10 @@
             background-color: $color-black-russian;
             color: rgba($color-default-white, 0.5);
             border: none;
+        }
+
+        &:focus ~ .input-select__head {
+            border-color: rgba($color-default-white, 0.5);
         }
     }
 
@@ -199,7 +208,7 @@
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     resize: none;
-    
+
     &__span {
         display: none;
         margin-bottom: 11px;
@@ -216,6 +225,7 @@
         outline: none;
         resize: none;
         overflow: hidden;
+        outline: none;
         border-bottom: 1px solid rgba($color-default-white, 0.3);
 
         &::placeholder {
@@ -228,6 +238,10 @@
             ~.input-textarea__span {
                 display: block;
             }
+        }
+
+        &:focus {
+            border-color: rgba($color-default-white, 0.5);
         }
     }
 
@@ -264,6 +278,37 @@
 
     &__input {
         opacity: 0;
+
+        &:checked {
+            &~.input-checkbox__mark {
+                background-color: $color-salmon;
+                box-shadow: 0px 2px 10px $color-salmon;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            &~.input-checkbox__span {
+                color: rgba($color-default-white, 1);
+            }
+        }
+
+        &:disabled,
+        &:disabled ~ .input-checkbox__span {
+            opacity: 0.3;
+        }
+
+        &:focus,
+        &:hover {
+            &~.input-checkbox__mark {
+                box-shadow: 0px 2px 10px $color-tomato;
+            }
+
+            &~.input-checkbox__span {
+                color: rgba($color-default-white, 0.5);
+            }
+        }
     }
 
     &__mark {
@@ -287,26 +332,6 @@
             background-size: cover;
             opacity: 0;
         }
-    }
-
-    &__input:checked {
-        &~.input-checkbox__mark {
-            background-color: $color-salmon;
-            box-shadow: 0px 2px 10px $color-salmon;
-
-            &::before {
-                opacity: 1;
-            }
-        }
-
-        &~.input-checkbox__span {
-            color: rgba($color-default-white, 1);
-        }
-    }
-
-    &__input:disabled,
-    &__input:disabled ~ .input-checkbox__span {
-        opacity: 0.3;
     }
 }
 
@@ -358,28 +383,40 @@
                 box-shadow: $shadow-salmon-2;
             }
         }
-    }
 
-    &__input:checked {
-        &~.input-switch__mark {
-            &::before {
-                left: auto;
-                right: 4px;
+        &:checked {
+            &~.input-switch__mark {
+                &::before {
+                    left: auto;
+                    right: 4px;
+                }
+            }
+
+            &~.input-switch__span--off {
+                color: rgba($color-default-white, 0.5);
+            }
+
+            &~.input-switch__span--on {
+                color: $color-default-white;
             }
         }
 
-        &~.input-switch__span--off {
-            color: rgba($color-default-white, 0.5);
+        &:disabled,
+        &:disabled ~ .input-switch__span {
+            opacity: 0.3;
         }
 
-        &~.input-switch__span--on {
-            color: $color-default-white;
-        }
-    }
+        &:focus,
+        &:hover {
+            ~.input-switch__mark {
+                border-color: $color-tomato;
 
-    &__input:disabled,
-    &__input:disabled ~ .input-switch__span {
-        opacity: 0.3;
+                &::before {
+                    box-shadow: 0px 2px 10px $color-tomato;
+                }
+            }
+            
+        }
     }
 
     @include vp-1024 {
@@ -454,6 +491,16 @@
     &__input:disabled ~ .input-radio__span {
         opacity: 0.3;
     }
+    
+    &__input:hover {
+        &~.input-radio__mark {
+            box-shadow: 0px 2px 10px $color-tomato;
+        }
+
+        &~.input-radio__span {
+            color: rgba($color-default-white, 0.5);
+        }
+    }
 }
 
 /* RANGE */
@@ -489,6 +536,13 @@
         margin: auto;
         width: 100%;
         height: 23px;
+
+        &:focus,
+        &:hover {
+            ~ .input-range__thumb {
+                box-shadow: 0px 2px 10px $color-tomato;
+            }
+        }
     }
 
     &__track {
@@ -510,7 +564,7 @@
         border-radius: 2px;
     }
 
-    .input-range__thumb {
+    &__thumb {
         position: absolute;
         display: block;
         margin: auto 0;

@@ -65,6 +65,12 @@
     &__link {
         color: rgba($color-default-white, 0.5);
         text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            color: rgba($color-default-white, 1);
+        }
     }
 
     &::before,
