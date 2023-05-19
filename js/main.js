@@ -16,13 +16,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-    smoothScroll();
     initHeaderNav();
-    scrollNav();
-    initModals();
-    initForm();
+    smoothScroll();
 
     window.addEventListener('load', () => {
+      scrollNav();
+      initModals();
+      initForm();
       ymaps.ready(initMap);
     });
 });
