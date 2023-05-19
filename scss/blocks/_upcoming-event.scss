@@ -146,20 +146,20 @@
         right: 0;
         width: 178px;
         height: 736px;
-        background-image: url("../img/mobile/blur/blur-6.png");
+        background-image: url("../img/mobile/blur/blur-6.webp");
         background-position: right bottom;
 
         @include vp-1360 {
             width: 314px;
             height: 686px;
             bottom: 0;
-            background-image: url("../img/tablet/blur/blur-tablet-6.png");
+            background-image: url("../img/tablet/blur/blur-tablet-6.webp");
         }
 
         @include vp-1920 {
             width: 258px;
             height: 646px;
-            background-image: url("../img/desktop/blur/blur-6.png");
+            background-image: url("../img/desktop/blur/blur-6.webp");
         }
     }
 
@@ -168,19 +168,19 @@
         left: 0;
         width: 337px;
         height: 418px;
-        background-image: url("../img/mobile/blur/blur-7.png");
+        background-image: url("../img/mobile/blur/blur-7.webp");
         background-position: left bottom;
 
         @include vp-1360 {
             width: 663px;
             height: 713px;
-            background-image: url("../img/tablet/blur/blur-tablet-7.png");
+            background-image: url("../img/tablet/blur/blur-tablet-7.webp");
         }
 
         @include vp-1920 {
             width: 815px;
             height: 673px;
-            background-image: url("../img/desktop/blur/blur-7.png");
+            background-image: url("../img/desktop/blur/blur-7.webp");
         }
     }
 
